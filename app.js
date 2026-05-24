@@ -241,8 +241,14 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================
-  // LEGEND CLICK → filter to category
+  // LEGEND: hide entries for empty categories, wire up click → filter
   // ==========================================
+  document.querySelectorAll('.legend__item').forEach(item => {
+    const cat = item.dataset.cat;
+    if (!PINS.some(p => p.category === cat)) {
+      item.style.display = 'none';
+    }
+  });
   document.querySelectorAll('.legend__item').forEach(item => {
     item.style.cursor = 'pointer';
     item.addEventListener('click', () => {
