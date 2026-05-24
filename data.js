@@ -869,6 +869,52 @@ const PINS = [
       { label: 'AZ State Parks: Slide Rock', url: 'https://azstateparks.com/slide-rock' },
       { label: 'Park Map & Hours', url: 'https://azstateparks.com/slide-rock/explore/maps' }
     ]
+  },
+  {
+    id: 'loy-canyon',
+    fromBasecamp: '~3 mi · 8 min from basecamp (closest hike on the map)',
+    category: 'hike',
+    name: 'Loy Canyon Trail',
+    short: 'Hike — Red-walled canyon floor + scramble option',
+    lat: 34.9322,
+    lng: -111.9250,
+    difficulty: 'Easy-Moderate (Hard if going to the saddle)',
+    distance: '5-7 mi RT typical · 11.8 mi RT full to Secret Mountain saddle',
+    description: `<strong>Sleeper pick literally next to basecamp.</strong> Long red-walled canyon floor with vermilion and buff sandstone cliffs pressing in, dry streambed with flash-flood-sculpted rock features. Most parties do 5-7 mi RT and turn around before the upper headwall. If you push to the top, the final 3 mi is a <strong>genuine Class 3 hand-and-foot scramble</strong> up to Secret Mountain saddle — the most sustained scramble of any hike within an hour of basecamp.`,
+    tips: [
+      'Dry streambed — no water-crossing concerns in October',
+      'Start early — the upper south-facing section gets warm',
+      'Most do a 5-7 mi RT and turn around; pushing to the saddle adds real elevation + Class 3 scramble',
+      'Trailhead at Hancock Ranch end of Loy Butte Rd — very close to camp'
+    ],
+    youtube: null,
+    links: [
+      { label: 'USFS Coconino: Loy Canyon #5', url: 'https://www.fs.usda.gov/r03/coconino/recreation/trails/loy-canyon-trail-no-5' },
+      { label: 'Arizona Highways: Loy Canyon', url: 'https://www.arizonahighways.com/loy-canyon-trail' }
+    ]
+  },
+  {
+    id: 'secret-canyon',
+    fromBasecamp: '~10 mi · 30-40 min from basecamp (FR 152 last 3.4 mi is slow HC dirt)',
+    category: 'hike',
+    name: 'Secret Canyon + HS Canyon',
+    short: 'Hike — Slottiest hike in the Dry Creek drainage',
+    lat: 34.9302,
+    lng: -111.8067,
+    difficulty: 'Moderate (route-finding deeper in)',
+    distance: '5-8 mi RT typical · 4.4+ mi one-way to upper canyon',
+    description: `<strong>The slottiest "trail" hike near Sedona.</strong> Permanent small stream, pools, boulder-filled narrow channels with short scrambles to bypass dryfalls, red walls closing in. <strong>HS Canyon branches left at 0.7 mi</strong> and climbs toward Maroon Mountain's sheer cliffs — quieter, often-empty side canyon. Combining the two = the best sleeper day in the Dry Creek drainage.`,
+    tips: [
+      '⚠️ FR 152 needs high-clearance 4WD for the last 3.4 mi — budget 30 min of slow crawling each way',
+      'Stream is small and cool but crossable in shoes — not a wade hike',
+      '⚠️ Avoid if any rain in the forecast (flash-flood terrain)',
+      'Branch left at 0.7 mi for the HS Canyon spur — quieter than the main fork'
+    ],
+    youtube: null,
+    links: [
+      { label: 'Secret Canyon #121 — AmericanSouthwest', url: 'https://www.americansouthwest.net/arizona/sedona/secret_canyon.html' },
+      { label: 'AllTrails: HS and Secret Canyons', url: 'https://www.alltrails.com/trail/us/arizona/hs-and-secret-canyons' }
+    ]
   }
 
   // FRIENDS & FAMILY PICKS
