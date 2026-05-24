@@ -337,6 +337,162 @@ const PINS = [
       { label: 'Trailforks: Girdner', url: 'https://www.trailforks.com/trails/girdner/' }
     ]
   },
+  {
+    id: 'scorpion',
+    fromBasecamp: '~13 mi · 25 min via 89A and Upper Red Rock Loop Rd',
+    suggested: true,
+    suggestedBy: 'Intermediate Suggestion from YouTube @ronsanderson99',
+    category: 'mtb',
+    name: 'Scorpion',
+    short: 'MTB — Intermediate, 2.1 mi tech-flow descent',
+    lat: 34.8462,
+    lng: -111.8286,
+    difficulty: 'Intermediate (Blue)',
+    distance: '2.1 mi',
+    description: `A Carroll Canyon hidden gem that starts near Red Rock High School and trends downhill with embedded basalt rock features punctuating an otherwise flowy line. About halfway through, the optional <strong>Pyramid spur</strong> peels off for advanced riders who want a techier descent. Best ridden north-to-south as a descent; works as part of a Skywalker / Herkenham / Ramshead loop.`,
+    tips: [
+      'Park at Red Rock HS lot for the classic top-down rip',
+      'Pair with Pyramid for a more technical full descent',
+      'Multi-directional — expect uphill traffic',
+      'Avoid right after rain; basalt embedded sections get slick'
+    ],
+    youtube: 'https://www.youtube.com/embed/S5RTeiIzM70',
+    youtubeTitle: 'Scorpion MTB Trail 4K POV — Sedona, AZ',
+    links: [
+      { label: 'Trailforks', url: 'https://www.trailforks.com/trails/scorpion-48867/' },
+      { label: 'MTBProject', url: 'https://www.mtbproject.com/trail/7038545/scorpion' }
+    ]
+  },
+  {
+    id: 'outer-limits',
+    fromBasecamp: '~5 mi · 12 min via Dry Creek Rd',
+    suggested: true,
+    suggestedBy: 'Intermediate Suggestion from YouTube @ronsanderson99',
+    category: 'mtb',
+    name: 'Outer Limits',
+    short: 'MTB — Intermediate, 6.3 mi flow epic',
+    lat: 34.8801,
+    lng: -111.8634,
+    difficulty: 'Intermediate (Blue)',
+    distance: '6.3 mi',
+    description: `Sedona's longest sustained flow line, opened 2019. From the Aerie/Cultural Park end it rolls fast through dips, rock gardens, and corners along the base of the Cockscomb. <strong>One short exposed section above Dry Creek</strong> and a steep techy zig-zag drop into the canyon give intermediates a few hike-a-bike moments. Easiest direction NW-to-SE.`,
+    tips: [
+      'Park at Cultural Park or Aerie trailhead — both add easy access',
+      'Combine with Last Frontier or Girdner for a 12+ mi loop',
+      'The Dry Creek exposure section is walkable — no shame',
+      'eBikes prohibited; dogs OK on leash'
+    ],
+    youtube: 'https://www.youtube.com/embed/NzHnV25NgNU',
+    youtubeTitle: 'The Longest Flow Trail in Sedona, Outer Limits!',
+    links: [
+      { label: 'Trailforks', url: 'https://www.trailforks.com/trails/outer-limits-170415/' },
+      { label: 'MTBProject', url: 'https://www.mtbproject.com/trail/7051886/outer-limits' }
+    ]
+  },
+  {
+    id: 'adobe-jack',
+    fromBasecamp: '~13 mi · 22 min via 89A through Sedona',
+    suggested: true,
+    suggestedBy: 'Intermediate Suggestion from YouTube @ronsanderson99',
+    category: 'mtb',
+    name: 'Adobe Jack',
+    short: 'MTB — Intermediate, 1.9 mi in-town singletrack',
+    lat: 34.8838,
+    lng: -111.7811,
+    difficulty: 'Intermediate (Blue)',
+    distance: '1.9 mi',
+    description: `A short but characterful in-town trail running between the Adobe Jack lot off 89A and the Jordan trail near the Sink Hole. The route weaves through dry wash sections and narrow climbing pinches that <strong>play more advanced than the Blue rating suggests</strong>. Great glue piece for stitching together a Soldier's Wash loop with Jordan, Javelina, and Crusty.`,
+    tips: [
+      'Parking lot is tiny (4–5 spots) — arrive early or bike from town',
+      'North-to-south rides faster; S-to-N is better for a bigger loop',
+      'A couple of narrow climbs may force a walk for intermediates',
+      'Combine with Grand Central / Javelina for a 6–10 mi day'
+    ],
+    youtube: 'https://www.youtube.com/embed/Mtc9v2q_LeM',
+    youtubeTitle: 'Adobe Jack — Sedona Trail Guide (Thunder Mountain Bikes)',
+    links: [
+      { label: 'Trailforks', url: 'https://www.trailforks.com/trails/adobe-jack/' },
+      { label: 'MTBProject', url: 'https://www.mtbproject.com/trail/4920585/adobe-jack-grand-central-loop' }
+    ]
+  },
+  {
+    id: 'little-rock',
+    fromBasecamp: '~20 mi · 32 min via 89A then Hwy 179 to Jack\'s Canyon',
+    suggested: true,
+    suggestedBy: 'Intermediate Suggestion from YouTube @ronsanderson99',
+    category: 'mtb',
+    name: 'Little Rock',
+    short: 'MTB — Intermediate, ~2.5 mi flowy slickrock XC',
+    lat: 34.7848,
+    lng: -111.7322,
+    difficulty: 'Intermediate (Blue)',
+    distance: '~2.5 mi',
+    description: `A newer Big Park trail in the Village of Oak Creek that bisects the VOC loop with fast classic XC singletrack and one rippable slickrock section. Mostly true intermediate with a couple of tricky punches; rolling enough that the climb sneaks by. <strong>Best paired with Rabbit Ears as the standard 5.9 mi loop.</strong>`,
+    tips: [
+      'Park at Jack\'s Canyon trailhead — less crowded than Bell Rock lots',
+      'Always ride as a loop with Rabbit Ears for the full experience',
+      'Higher equestrian use than most Sedona trails — yield politely',
+      'Great cold-day option — lower elevation than west-side trails'
+    ],
+    youtube: 'https://www.youtube.com/embed/M6TZvJE77as',
+    youtubeTitle: 'Best Intermediate MTB Trail in Sedona — Little Rock & Rabbit Ears',
+    links: [
+      { label: 'Trailforks', url: 'https://www.trailforks.com/trails/little-rock-423832/' },
+      { label: 'MTBProject (loop)', url: 'https://www.mtbproject.com/trail/7072176/rabbit-ears-little-rock-loop' }
+    ]
+  },
+  {
+    id: 'rabbit-ears',
+    fromBasecamp: '~20 mi · 32 min via 89A and Hwy 179 to Jack\'s Canyon',
+    suggested: true,
+    suggestedBy: 'Intermediate Suggestion from YouTube @ronsanderson99',
+    category: 'mtb',
+    name: 'Rabbit Ears',
+    short: 'MTB — Intermediate, 2.5 mi climb-then-descend',
+    lat: 34.7850,
+    lng: -111.7322,
+    difficulty: 'Intermediate (Blue)',
+    distance: '2.5 mi',
+    description: `Opened 2021. Starts with a grindy ~1.5 mi climb out of Jack's Canyon, then pays you back with a long natural-flow descent featuring views west to Courthouse Butte, Bell Rock, and the namesake Rabbit Ears spire. <strong>~450 ft gain.</strong> Moderate tech, big rewards, low crowds compared to Bell Rock Pathway.`,
+    tips: [
+      'Park at Jack\'s Canyon trailhead off Big Park / 179',
+      'Best as a loop with Little Rock (~5.9 mi total)',
+      'Both directions work, but climb first / descend west is the move',
+      'Mostly exposed — not a great midday summer ride'
+    ],
+    youtube: 'https://www.youtube.com/embed/-5BPMRFcugQ',
+    youtubeTitle: 'Riding Rabbit Ears in Sedona, Arizona with Alex Petitdemange',
+    links: [
+      { label: 'Trailforks', url: 'https://www.trailforks.com/trails/rabbit-ears-425649/' },
+      { label: 'MTBProject', url: 'https://www.mtbproject.com/trail/7072172/rabbit-ears' }
+    ]
+  },
+  {
+    id: 'axis',
+    fromBasecamp: '~7 mi · 15 min via Dry Creek Rd and 89A',
+    suggested: true,
+    suggestedBy: 'Intermediate Suggestion from YouTube @ronsanderson99',
+    category: 'mtb',
+    name: 'Axis',
+    short: 'MTB — Intermediate, 3.2 mi flowy connector',
+    lat: 34.8550,
+    lng: -111.8327,
+    difficulty: 'Intermediate (Blue)',
+    distance: '3.2 mi',
+    description: `A Western Gateway workhorse that connects Cultural Park across Dry Creek to the Cockscomb trail system. The first segment to Lasso is fast and clear-sighted; the climb half pitches up into a <strong>Black-rated effort</strong>, then the lower mile tilts back downhill through two fast wide slickrock drainages — the highlight of the trail.`,
+    tips: [
+      'Start at Cultural Park lot — free, big, and rarely full',
+      'Climb is sneaky-hard (Black climb rating) despite the Blue label',
+      'Stitch into a Roundabout → Girdner → Axis → Bolo → LF → Outer Limits loop',
+      'eBikes prohibited'
+    ],
+    youtube: 'https://www.youtube.com/embed/hqj2tgKCILE',
+    youtubeTitle: 'Mountain Biking in Sedona, AZ — Axis and Girdner Trail',
+    links: [
+      { label: 'Trailforks', url: 'https://www.trailforks.com/trails/axis/' },
+      { label: 'MTBProject', url: 'https://www.mtbproject.com/trail/7065533/axis' }
+    ]
+  },
 
   {
     id: 'shuttle-llama-slim',
