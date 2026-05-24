@@ -59,7 +59,7 @@ a:hover { color: var(--ember); }
     radial-gradient(ellipse at 20% 80%, rgba(124, 45, 18, 0.25), transparent 60%),
     linear-gradient(180deg, #1a0f08 0%, #2b1810 60%, #3d2418 100%);
   color: var(--sand);
-  padding: clamp(1.25rem, 3.5vw, 2.5rem) clamp(1rem, 3vw, 2.25rem) clamp(1.5rem, 3.5vw, 2.75rem);
+  padding: clamp(0.7rem, 2vw, 1.4rem) clamp(1rem, 3vw, 2.25rem) clamp(0.8rem, 2vw, 1.5rem);
   overflow: hidden;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -108,9 +108,9 @@ a:hover { color: var(--ember); }
   font-weight: 400;
   line-height: 0.88;
   letter-spacing: -0.01em;
-  font-size: clamp(2.5rem, 9vw, 7rem);
+  font-size: clamp(1.5rem, 4.5vw, 3.5rem);
   color: var(--sand);
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.5rem;
 }
 .title-line { display: block; }
 .title-line--1 { color: var(--ember); }
@@ -127,11 +127,11 @@ a:hover { color: var(--ember); }
 
 .masthead__sub {
   font-family: var(--font-serif);
-  font-size: clamp(1rem, 1.4vw, 1.3rem);
-  max-width: 50ch;
+  font-size: clamp(0.85rem, 1.1vw, 1rem);
+  max-width: 70ch;
   color: rgba(243, 233, 216, 0.85);
-  line-height: 1.5;
-  margin-bottom: 2rem;
+  line-height: 1.4;
+  margin-bottom: 0.8rem;
 }
 
 .legend {
@@ -636,10 +636,16 @@ a:hover { color: var(--ember); }
   letter-spacing: 0.02em;
 }
 
+@media (max-width: 1100px) {
+  .ride-list { grid-template-columns: repeat(2, 1fr); }
+  .days { grid-template-columns: repeat(2, 1fr); }
+  .qa-log { grid-template-columns: 1fr; }
+}
 @media (max-width: 900px) {
   .crew { grid-template-columns: 1fr 1fr; }
   .ride-list { grid-template-columns: 1fr; }
   .days { grid-template-columns: 1fr; }
+  .checklist { grid-template-columns: 1fr; }
 }
 @media (max-width: 720px) {
   .crew {
@@ -663,7 +669,10 @@ a:hover { color: var(--ember); }
    RESEARCH LOG — running Q&A about the area
    ============================================ */
 .qa-log {
-  margin-top: 2rem;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 1.5rem;
 }
 .qa {
   padding: 0.9rem 0;
@@ -720,7 +729,7 @@ a:hover { color: var(--ember); }
 /* Clickable list items: click any to fly the map to that pin */
 .ride-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 0 1rem;
   border-top: 1px solid var(--line);
 }
@@ -808,6 +817,9 @@ a:hover { color: var(--ember); }
 .checklist {
   list-style: none;
   padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 1.5rem;
 }
 .checklist li {
   padding: 0.4rem 0 0.4rem 1.4rem;
@@ -828,7 +840,7 @@ a:hover { color: var(--ember); }
 .days {
   margin-top: 0.8rem;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 0 1.5rem;
 }
 .day {
