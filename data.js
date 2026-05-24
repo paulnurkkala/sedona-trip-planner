@@ -145,6 +145,7 @@ const PINS = [
   {
     id: 'hangover',
     fromBasecamp: '22 mi · 42 min from basecamp',
+    danger: true,
     category: 'mtb',
     name: 'Hangover Trail',
     short: 'MTB — HARDEST in Sedona',
@@ -830,6 +831,12 @@ const PINS = [
   // call-out in the popup, modal, and list view. Useful for opinions
   // like "looks easy but might be a good warmup" — separate from the
   // editorial `tips` array (which is general field advice).
+
+  // DANGER / SKULL & CROSSBONES
+  // Add `danger: true` to any pin to put a black skull badge on the
+  // map pin and a "USE EXTREME CAUTION" warning in the popup and modal.
+  // Use for trails with real consequences (cliff exposure, no bailout,
+  // expert-only).
 ];
 
 const CATEGORIES = {

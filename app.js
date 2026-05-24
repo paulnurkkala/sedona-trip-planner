@@ -79,7 +79,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const heartBadge = pin.favorite
       ? `<div class="pin-heart" title="My favorite">♥</div>`
       : '';
-    const badges = heartBadge + starBadge;
+    const skullBadge = pin.danger
+      ? `<div class="pin-skull" title="Use extreme caution">☠</div>`
+      : '';
+    const badges = heartBadge + starBadge + skullBadge;
 
     // MTB: standalone bicycle silhouette, no colored teardrop background.
     // Anchor at the wheel line (cy=17.5 in viewBox 0-24 → ~73% down),
@@ -155,6 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const popupHtml = `
       <div class="popup-short">${CATEGORIES[pin.category].label}</div>
       <strong>${pin.name}</strong>
+      ${pin.danger ? `<div class="popup-danger">☠ Use extreme caution</div>` : ''}
       ${pin.favorite ? `<div class="popup-favorite">♥ My favorite</div>` : ''}
       ${pin.suggested ? `<div class="popup-suggested">★ ${pin.suggestedBy || 'Suggested by friends & family'}</div>` : ''}
       ${pin.note ? `<div class="popup-note">📝 ${pin.note}</div>` : ''}
@@ -215,6 +219,10 @@ document.addEventListener('DOMContentLoaded', () => {
       ? `<div class="modal__note"><span class="modal__note-label">📝 My note</span>${pin.note}</div>`
       : '';
 
+    const dangerBanner = pin.danger
+      ? `<div class="modal__danger">☠ Use extreme caution — real consequences for mistakes</div>`
+      : '';
+
     const tipsHtml = (pin.tips && pin.tips.length) ? `
       <div class="modal__tips">
         <div class="modal__tips-title">Field Notes</div>
@@ -240,6 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="modal__cat" style="background:${cat.color}">${cat.icon} ${cat.label}</div>
       <h2 class="modal__title">${pin.name}</h2>
       <div class="modal__meta">${metaItems.join('')}</div>
+      ${dangerBanner}
       ${favoriteBanner}
       ${suggestedBanner}
       ${basecampBanner}
@@ -320,6 +329,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="ride-list__row">
             <strong>${pin.name}</strong>
             <div class="ride-list__badges">
+              ${pin.danger ? '<span class="ride-list__skull" title="Use extreme caution">☠</span>' : ''}
               ${pin.favorite ? '<span class="ride-list__heart" title="My favorite">♥</span>' : ''}
               ${pin.suggested ? '<span class="ride-list__star" title="Suggested by friends & family">★</span>' : ''}
             </div>
