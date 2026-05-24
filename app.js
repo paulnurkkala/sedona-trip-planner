@@ -91,6 +91,26 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
+    // OHV: standalone dirt-bike silhouette in orange, no background pill
+    if (category === 'ohv') {
+      const size = 42;
+      const motoSvg = `
+        <svg viewBox="0 0 24 24" width="${size}" height="${size}" fill="none" stroke="${color}" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="5.5" cy="17.5" r="3.8" fill="#ffffff"/>
+          <circle cx="18.5" cy="17.5" r="3.8" fill="#ffffff"/>
+          <path d="M5.5 17.5 L9 11 L14.5 11 L18.5 17.5 Z" fill="${color}"/>
+          <path d="M14.5 11 L17.5 7 L20.5 7" />
+          <path d="M9 11 L7.5 8" />
+        </svg>`;
+      return L.divIcon({
+        className: 'sedona-pin sedona-pin--moto' + (pin.suggested ? ' sedona-pin--suggested' : ''),
+        html: `<div class="pin-bike pin-moto">${motoSvg}${starBadge}</div>`,
+        iconSize: [size, size],
+        iconAnchor: [size / 2, size / 2],
+        popupAnchor: [0, -size / 2 + 2]
+      });
+    }
+
     const isBasecamp = category === 'basecamp';
     const klass = isBasecamp ? 'pin-marker pin-marker--basecamp' : 'pin-marker';
     const size = isBasecamp ? 44 : 36;

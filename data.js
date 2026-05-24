@@ -890,7 +890,7 @@ const CATEGORIES = {
   basecamp:  { label: 'Basecamp', color: '#d97706', icon: '⛺' },
   shop:      { label: 'Bike Shop', color: '#0891b2', icon: '🔧' },
   mtb:       { label: 'Mountain Bike', color: '#dc2626', icon: '🚵' },
-  ohv:       { label: 'E-Dirt Bike (OHV)', color: '#7c2d12', icon: '🏍️' },
+  ohv:       { label: 'E-Dirt Bike (OHV)', color: '#ea580c', icon: '🏍️' },
   hike:      { label: 'Hike', color: '#16a34a', icon: '🥾' },
   suggested: { label: 'Friends & Family Picks', color: '#eab308', icon: '★' }
 };
