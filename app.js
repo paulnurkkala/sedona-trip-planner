@@ -63,10 +63,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   // CUSTOM PIN ICON FACTORY
   // ==========================================
-  function makeIcon(category) {
+  function makeIcon(pin) {
+    const category = pin.category;
     const cat = CATEGORIES[category];
     const color = cat ? cat.color : '#666';
     const icon = cat ? cat.icon : '•';
+    const starBadge = pin.suggested
+      ? `<div class="pin-star" title="Suggested by friends & family">★</div>`
+      : '';
 
     // MTB: standalone bicycle silhouette, no colored teardrop background
     if (category === 'mtb') {
@@ -79,8 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
           <path d="M12 17.5V14l-3-3 5-4 2 3h2"/>
         </svg>`;
       return L.divIcon({
-        className: 'sedona-pin sedona-pin--bike',
-        html: `<div class="pin-bike">${bikeSvg}</div>`,
+        className: 'sedona-pin sedona-pin--bike' + (pin.suggested ? ' sedona-pin--suggested' : ''),
+        html: `<div class="pin-bike">${bikeSvg}${starBadge}</div>`,
         iconSize: [size, size],
         iconAnchor: [size / 2, size / 2],
         popupAnchor: [0, -size / 2 + 2]
@@ -92,8 +96,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const size = isBasecamp ? 44 : 36;
 
     return L.divIcon({
-      className: 'sedona-pin',
-      html: `<div class="${klass}" style="background:${color}"><div class="pin-marker__inner">${icon}</div></div>`,
+      className: 'sedona-pin' + (pin.suggested ? ' sedona-pin--suggested' : ''),
+      html: `<div class="${klass}" style="background:${color}"><div class="pin-marker__inner">${icon}</div></div>${starBadge}`,
       iconSize: [size, size],
       iconAnchor: [size / 2, size],
       popupAnchor: [0, -size + 6]
@@ -106,13 +110,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const markers = {};
   PINS.forEach(pin => {
     const marker = L.marker([pin.lat, pin.lng], {
-      icon: makeIcon(pin.category),
+      icon: makeIcon(pin),
       title: pin.name
     }).addTo(map);
 
     const popupHtml = `
       <div class="popup-short">${CATEGORIES[pin.category].label}</div>
       <strong>${pin.name}</strong>
+      ${pin.suggested ? `<div class="popup-suggested">★ ${pin.suggestedBy || 'Suggested by friends & family'}</div>` : ''}
       ${pin.distance ? `<div style="font-size: 0.85rem; color: #6b4423; margin-bottom: 0.4rem;">${pin.distance}${pin.difficulty ? ' · ' + pin.difficulty : ''}</div>` : ''}
       ${pin.fromBasecamp ? `<div class="popup-basecamp">⛺ ${pin.fromBasecamp}</div>` : ''}
       <div style="font-size: 0.9rem; line-height: 1.4; color: #2b1810; margin-bottom: 0.5rem;">${pin.short || ''}</div>
@@ -158,6 +163,10 @@ document.addEventListener('DOMContentLoaded', () => {
       ? `<div class="modal__basecamp">⛺ ${pin.fromBasecamp}</div>`
       : '';
 
+    const suggestedBanner = pin.suggested
+      ? `<div class="modal__suggested">★ ${pin.suggestedBy || 'Suggested by friends & family'}</div>`
+      : '';
+
     const tipsHtml = (pin.tips && pin.tips.length) ? `
       <div class="modal__tips">
         <div class="modal__tips-title">Field Notes</div>
@@ -183,6 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="modal__cat" style="background:${cat.color}">${cat.icon} ${cat.label}</div>
       <h2 class="modal__title">${pin.name}</h2>
       <div class="modal__meta">${metaItems.join('')}</div>
+      ${suggestedBanner}
       ${basecampBanner}
       <div class="modal__desc">${pin.description}</div>
       ${tipsHtml}

@@ -142,6 +142,7 @@ const PINS = [
   {
     id: 'hangover',
     fromBasecamp: '22 mi · 42 min from basecamp',
+    suggested: true,
     category: 'mtb',
     name: 'Hangover Trail',
     short: 'MTB — HARDEST in Sedona',
@@ -509,6 +510,7 @@ const PINS = [
   {
     id: 'cathedral',
     fromBasecamp: '22 mi · 40 min from basecamp',
+    suggested: true,
     category: 'hike',
     name: 'Cathedral Rock',
     short: 'Hike — Iconic, sunset must',
@@ -533,6 +535,7 @@ const PINS = [
   {
     id: 'devils-bridge',
     fromBasecamp: '11 mi · 25 min from basecamp',
+    suggested: true,
     category: 'hike',
     name: 'Devil\'s Bridge',
     short: 'Hike — Iconic arch, 4.2 mi',
@@ -646,6 +649,7 @@ const PINS = [
   {
     id: 'west-fork',
     fromBasecamp: '32 mi · 55 min from basecamp',
+    suggested: true,
     category: 'hike',
     name: 'West Fork of Oak Creek',
     short: 'Hike — Stream crossings, fall colors',
@@ -784,6 +788,8 @@ const PINS = [
   {
     id: 'slide-rock',
     fromBasecamp: '28 mi · 50 min from basecamp',
+    suggested: true,
+    suggestedBy: 'Recommended by multiple friends',
     category: 'hike',
     name: 'Slide Rock State Park',
     short: 'Destination — Natural rock waterslides',
@@ -805,13 +811,86 @@ const PINS = [
       { label: 'AZ State Parks: Slide Rock', url: 'https://azstateparks.com/slide-rock' },
       { label: 'Park Map & Hours', url: 'https://azstateparks.com/slide-rock/explore/maps' }
     ]
+  },
+
+  // FRIENDS & FAMILY PICKS (standalone — duplicates of existing pins are flagged via `suggested: true`)
+  {
+    id: 'tlaquepaque',
+    category: 'suggested',
+    name: 'Tlaquepaque Arts Village',
+    short: 'Family pick — Shopping, food, gallery walk',
+    lat: 34.8636,
+    lng: -111.7621,
+    fromBasecamp: '19 mi · 36 min from basecamp',
+    difficulty: null,
+    distance: null,
+    description: `Replica Mexican-style arts village on the banks of Oak Creek in central Sedona — open-air courtyards, galleries, restaurants, and a famous chapel. The rest-day "go walk around for two hours" recommendation that every friend-of-a-friend gives. <strong>Lunch at Oak Creek Brewery or El Rincon</strong> if you're hungry.`,
+    tips: [
+      'Free to walk around; pay only for food/shopping',
+      'Best late-morning before tour bus crowds peak',
+      'Tequila tasting at Vino di Sedona is a thing'
+    ],
+    suggested: true,
+    suggestedBy: 'Suggested by family',
+    youtube: null,
+    links: [
+      { label: 'Official Site', url: 'https://tlaq.com/' }
+    ]
+  },
+  {
+    id: 'pisa-lisa',
+    category: 'suggested',
+    name: 'Pisa Lisa',
+    short: 'Family pick — Wood-fired pizza, post-ride dinner',
+    lat: 34.8616,
+    lng: -111.8158,
+    fromBasecamp: '16 mi · 32 min from basecamp',
+    difficulty: null,
+    distance: null,
+    description: `Lisa Dahl's wood-fired pizza spot in West Sedona — the locals' "you have to go" pizza place. Honest crust, real char, salads that actually have produce on them. Reasonable prices for Sedona. <strong>The post-Hangover-ride dinner pick.</strong>`,
+    tips: [
+      'No reservations — line forms fast on weekends',
+      'Sit at the bar for fastest service',
+      'Margherita + a draft beer is the move'
+    ],
+    suggested: true,
+    suggestedBy: 'Suggested by friends',
+    youtube: null,
+    links: [
+      { label: 'Official Site', url: 'https://www.pisalisa.com/' }
+    ]
+  },
+  {
+    id: 'mariposa',
+    category: 'suggested',
+    name: 'Mariposa Latin Inspired Grill',
+    short: 'Family pick — Sunset dinner with red rock view',
+    lat: 34.8602,
+    lng: -111.8266,
+    fromBasecamp: '15 mi · 30 min from basecamp',
+    difficulty: null,
+    distance: null,
+    description: `Lisa Dahl's higher-end Latin-inspired restaurant with one of the best red-rock dinner views in Sedona. <strong>Reserve the outside patio for sunset</strong> — the rocks light up while you eat. Pricier than Pisa Lisa but worth one "real dinner" night during the trip.`,
+    tips: [
+      '⚠️ Reservations required — book a week ahead',
+      'Patio seating only at sunset is the whole point',
+      'Argentine grill / lamb chops are the standouts'
+    ],
+    suggested: true,
+    suggestedBy: 'Suggested by family',
+    youtube: null,
+    links: [
+      { label: 'Official Site', url: 'https://www.mariposasedona.com/' },
+      { label: 'OpenTable', url: 'https://www.opentable.com/r/mariposa-latin-inspired-grill-sedona' }
+    ]
   }
 ];
 
 const CATEGORIES = {
-  basecamp: { label: 'Basecamp', color: '#d97706', icon: '⛺' },
-  shop:     { label: 'Bike Shop', color: '#0891b2', icon: '🔧' },
-  mtb:      { label: 'Mountain Bike', color: '#dc2626', icon: '🚵' },
-  ohv:      { label: 'E-Dirt Bike (OHV)', color: '#7c2d12', icon: '🏍️' },
-  hike:     { label: 'Hike', color: '#16a34a', icon: '🥾' }
+  basecamp:  { label: 'Basecamp', color: '#d97706', icon: '⛺' },
+  shop:      { label: 'Bike Shop', color: '#0891b2', icon: '🔧' },
+  mtb:       { label: 'Mountain Bike', color: '#dc2626', icon: '🚵' },
+  ohv:       { label: 'E-Dirt Bike (OHV)', color: '#7c2d12', icon: '🏍️' },
+  hike:      { label: 'Hike', color: '#16a34a', icon: '🥾' },
+  suggested: { label: 'Friends & Family Picks', color: '#eab308', icon: '★' }
 };

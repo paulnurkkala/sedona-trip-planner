@@ -234,6 +234,28 @@ a:hover { color: var(--ember); }
 }
 .pin-bike:hover { transform: scale(1.15); }
 
+/* Gold star badge: marks pins that friends & family also suggested */
+.sedona-pin { position: relative; }
+.pin-star {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #eab308;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  z-index: 2;
+  pointer-events: none;
+}
+.pin-bike .pin-star { top: 0; right: 0; }
+
 .leaflet-popup-content-wrapper {
   background: var(--paper);
   border-radius: 6px;
@@ -291,6 +313,20 @@ a:hover { color: var(--ember); }
   padding: 0.25rem 0.55rem;
   border-radius: 3px;
   margin-bottom: 0.55rem;
+}
+.leaflet-popup-content .popup-suggested {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: #eab308;
+  color: #2b1810;
+  padding: 0.25rem 0.55rem;
+  border-radius: 3px;
+  margin-bottom: 0.55rem;
+  margin-right: 0.4rem;
 }
 
 /* ============================================
@@ -559,6 +595,22 @@ a:hover { color: var(--ember); }
   color: #fff;
   padding: 0.55rem 0.9rem;
   border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+.modal__suggested {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: #eab308;
+  color: #2b1810;
+  padding: 0.55rem 0.9rem;
+  border-radius: 4px;
+  margin-right: 0.5rem;
   margin-bottom: 1.5rem;
 }
 
