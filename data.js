@@ -50,6 +50,7 @@ const PINS = [
   {
     id: 'aerie',
     fromBasecamp: '4 mi · 12 min from basecamp',
+    favorite: true,
     category: 'mtb',
     name: 'Aerie / Cockscomb Loop',
     short: 'MTB — Intermediate, 6.1 mi',
@@ -73,6 +74,7 @@ const PINS = [
   {
     id: 'mescal',
     fromBasecamp: '13 mi · 25 min from basecamp',
+    favorite: true,
     category: 'mtb',
     name: 'Mescal Trail',
     short: 'MTB — Intermediate, slickrock classic',
@@ -96,6 +98,7 @@ const PINS = [
   {
     id: 'chuckwagon',
     fromBasecamp: '13 mi · 25 min from basecamp',
+    note: 'Looks very easy/basic, but might be a good warmup.',
     category: 'mtb',
     name: 'Chuck Wagon Trail',
     short: 'MTB — Sedona\'s purest flow',
@@ -820,6 +823,13 @@ const PINS = [
   // pin. They get a red heart badge on the map and in the list view —
   // separate from the gold star (friends & family) so you can tell who
   // recommended what.
+
+  // PERSONAL NOTES
+  // Add `note: 'free text'` to any pin to attach a personal observation
+  // that's not a "favorite" flag. Notes show as a yellow sticky-note
+  // call-out in the popup, modal, and list view. Useful for opinions
+  // like "looks easy but might be a good warmup" — separate from the
+  // editorial `tips` array (which is general field advice).
 ];
 
 const CATEGORIES = {

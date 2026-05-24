@@ -157,6 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <strong>${pin.name}</strong>
       ${pin.favorite ? `<div class="popup-favorite">♥ My favorite</div>` : ''}
       ${pin.suggested ? `<div class="popup-suggested">★ ${pin.suggestedBy || 'Suggested by friends & family'}</div>` : ''}
+      ${pin.note ? `<div class="popup-note">📝 ${pin.note}</div>` : ''}
       ${pin.distance ? `<div style="font-size: 0.85rem; color: #6b4423; margin-bottom: 0.4rem;">${pin.distance}${pin.difficulty ? ' · ' + pin.difficulty : ''}</div>` : ''}
       ${pin.fromBasecamp ? `<div class="popup-basecamp">⛺ ${pin.fromBasecamp}</div>` : ''}
       <div style="font-size: 0.9rem; line-height: 1.4; color: #2b1810; margin-bottom: 0.5rem;">${pin.short || ''}</div>
@@ -210,6 +211,10 @@ document.addEventListener('DOMContentLoaded', () => {
       ? `<div class="modal__favorite">♥ My favorite</div>`
       : '';
 
+    const noteBanner = pin.note
+      ? `<div class="modal__note"><span class="modal__note-label">📝 My note</span>${pin.note}</div>`
+      : '';
+
     const tipsHtml = (pin.tips && pin.tips.length) ? `
       <div class="modal__tips">
         <div class="modal__tips-title">Field Notes</div>
@@ -238,6 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ${favoriteBanner}
       ${suggestedBanner}
       ${basecampBanner}
+      ${noteBanner}
       <div class="modal__desc">${pin.description}</div>
       ${tipsHtml}
       ${videoHtml}
@@ -320,6 +326,7 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
           ${meta ? `<div class="ride-list__meta">${meta}</div>` : ''}
           ${pin.short ? `<div class="ride-list__short">${pin.short}</div>` : ''}
+          ${pin.note ? `<div class="ride-list__note">📝 ${pin.note}</div>` : ''}
           ${pin.fromBasecamp ? `<div class="ride-list__basecamp">⛺ ${pin.fromBasecamp}</div>` : ''}
         </li>
       `;
