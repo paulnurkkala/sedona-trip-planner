@@ -197,7 +197,7 @@ const PINS = [
     id: 'slim-shady',
     fromBasecamp: '24 mi · 43 min from basecamp',
     favorite: true,
-    note: 'Looks pretty quick, but not super duper challenging.',
+    note: 'Looks pretty quick, but not super duper challenging. Pair with Llama + Bell Rock Pathway as a shuttle (see "Shuttle Run" pin).',
     category: 'mtb',
     name: 'Slim Shady',
     short: 'MTB — Intermediate flow classic',
@@ -221,6 +221,7 @@ const PINS = [
     id: 'llama',
     fromBasecamp: '25 mi · 45 min from basecamp',
     favorite: true,
+    note: 'Best ridden top-down as part of the Llama → Slim Shady → Bell Rock shuttle (see "Shuttle Run" pin).',
     category: 'mtb',
     name: 'Llama Trail',
     short: 'MTB — Intermediate flow with tech bits',
@@ -329,6 +330,57 @@ const PINS = [
     ]
   },
 
+  {
+    id: 'shuttle-llama-slim',
+    fromBasecamp: '24 mi · 45 min from basecamp (drop) · pickup 26 mi · 48 min',
+    category: 'mtb',
+    name: 'Shuttle Run: Llama → Slim Shady → Bell Rock Pathway',
+    short: 'MTB — Blue, ~6-7 mi, mostly descending, shuttleable',
+    lat: 34.82174,
+    lng: -111.77177,
+    difficulty: 'Intermediate (Blue)',
+    distance: '~6-7 mi, ~400-500 ft net descent',
+    description: `The cleanest Blue-grade "drop and ride" line in Sedona. Drop at <strong>Little Horse Trailhead</strong> (Hwy 179, milepost ~309.8), ride Llama → Slim Shady → Bell Rock Pathway south to <strong>Bell Rock Vista</strong> for pickup. Both ends sit on paved Hwy 179, and the free Sedona Shuttle covers Little Horse Thu–Sun (no driver needed). Twisty red-dirt singletrack with short slickrock bits and big Bell Rock / Courthouse views. No cliff exposure, no mandatory features. <strong>Sedona doesn't have a true Whistler-style gravity descent</strong> — expect short pedaly bits between the descending sections — but this is as close as it gets at the Blue grade.`,
+    tips: [
+      'Drop: Little Horse TH (34.82174, -111.77177)',
+      'Pickup: Bell Rock Vista TH (~34.792, -111.767), a few miles south on Hwy 179',
+      'Free Sedona Shuttle covers Little Horse Thu–Sun — skip the driver',
+      'Ride north-to-south for the descent character',
+      'Combines two trails already on the map (Llama + Slim Shady) into one continuous shuttle line'
+    ],
+    youtube: null,
+    links: [
+      { label: 'Trailforks: Slim Shady', url: 'https://www.trailforks.com/trails/slim-shady/' },
+      { label: 'MTB Project: Bell Rock', url: 'https://www.mtbproject.com/trail/4915849/bell-rock-trail' },
+      { label: 'Sedona Shuttle Schedule', url: 'https://sedonashuttle.com/trailhead-shuttles/' }
+    ]
+  },
+  {
+    id: 'shuttle-templeton',
+    fromBasecamp: '24 mi · 45 min from basecamp (drop) · pickup 22 mi · 40 min',
+    category: 'mtb',
+    name: 'Shuttle Run: Templeton → HT',
+    short: 'MTB — Mostly Blue, one Black pitch most walk',
+    lat: 34.82174,
+    lng: -111.77180,
+    difficulty: 'Blue with one Black pitch',
+    distance: '~3.5 mi, mostly descending',
+    note: 'One Black section near the finish (Cathedral Rock → Oak Creek pitch) — even strong intermediates often walk it. Bring shoes for hike-a-bike.',
+    description: `Shorter shuttleable descent option. Drop at <strong>Little Horse Trailhead</strong> (Hwy 179), ride Templeton + HT connector, pickup at <strong>Back O' Beyond TH</strong> on the west side. Mostly Blue character with iconic Cathedral Rock views the whole way down. Stacks on the same Little Horse drop as the Llama line, so you can do both in one shuttle day.`,
+    tips: [
+      'Drop: Little Horse TH (34.82174, -111.77177)',
+      'Pickup: Back O\' Beyond TH (~34.827, -111.790)',
+      '⚠️ One Black pitch at the finish — walk it if you need',
+      'Pairs naturally as the "second run" after the Llama → Slim Shady shuttle',
+      'Iconic Cathedral Rock views the whole descent'
+    ],
+    youtube: null,
+    links: [
+      { label: 'MTB Project: Templeton', url: 'https://www.mtbproject.com/trail/594263/templeton-trail' },
+      { label: 'Trailforks: Templeton', url: 'https://www.trailforks.com/trails/templeton-15041/' }
+    ]
+  },
+
   // E-DIRT BIKE / OHV
   {
     id: 'outlaw-ohv',
@@ -357,6 +409,7 @@ const PINS = [
   {
     id: 'diamondback',
     fromBasecamp: '1 mi · 3 min from basecamp (ride from tent)',
+    favorite: true,
     category: 'ohv',
     name: 'Diamondback Gulch (OHV)',
     short: 'E-Dirt Bike — Nature\'s rollercoaster',
