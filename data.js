@@ -196,6 +196,8 @@ const PINS = [
   {
     id: 'slim-shady',
     fromBasecamp: '24 mi · 43 min from basecamp',
+    favorite: true,
+    note: 'Looks pretty quick, but not super duper challenging.',
     category: 'mtb',
     name: 'Slim Shady',
     short: 'MTB — Intermediate flow classic',
