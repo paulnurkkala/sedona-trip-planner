@@ -170,6 +170,8 @@ const PINS = [
   {
     id: 'broken-arrow-mtb',
     fromBasecamp: '22 mi · 40 min from basecamp',
+    danger: true,
+    note: 'Need to watch this one more closely before deciding whether to attempt.',
     category: 'mtb',
     name: 'Broken Arrow → Hogs',
     short: 'MTB — Expert, techy red rock',
