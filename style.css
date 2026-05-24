@@ -262,6 +262,19 @@ a:hover { color: var(--ember); }
   cursor: pointer;
 }
 .leaflet-popup-content .popup-btn:hover { background: var(--rust-deep); }
+.leaflet-popup-content .popup-basecamp {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--cat-basecamp);
+  color: #fff;
+  padding: 0.25rem 0.55rem;
+  border-radius: 3px;
+  margin-bottom: 0.55rem;
+}
 
 /* ============================================
    BAND (weather stats)
@@ -515,6 +528,22 @@ a:hover { color: var(--ember); }
   border-bottom: 1px solid var(--line);
 }
 .modal__meta span { display: inline-flex; align-items: center; gap: 0.4rem; }
+
+.modal__basecamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--cat-basecamp);
+  color: #fff;
+  padding: 0.55rem 0.9rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
 
 .modal__desc {
   font-family: var(--font-serif);

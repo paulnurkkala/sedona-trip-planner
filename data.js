@@ -26,6 +26,7 @@ const PINS = [
   },
   {
     id: 'thunder-mtn',
+    fromBasecamp: '18 mi · 35 min from basecamp',
     category: 'shop',
     name: 'Thunder Mountain Bikes',
     short: 'Trail beta & tune-ups',
@@ -48,6 +49,7 @@ const PINS = [
   // MOUNTAIN BIKING
   {
     id: 'aerie',
+    fromBasecamp: '4 mi · 12 min from basecamp',
     category: 'mtb',
     name: 'Aerie / Cockscomb Loop',
     short: 'MTB — Intermediate, 6.1 mi',
@@ -70,6 +72,7 @@ const PINS = [
   },
   {
     id: 'mescal',
+    fromBasecamp: '13 mi · 25 min from basecamp',
     category: 'mtb',
     name: 'Mescal Trail',
     short: 'MTB — Intermediate, slickrock classic',
@@ -92,6 +95,7 @@ const PINS = [
   },
   {
     id: 'chuckwagon',
+    fromBasecamp: '13 mi · 25 min from basecamp',
     category: 'mtb',
     name: 'Chuck Wagon Trail',
     short: 'MTB — Sedona\'s purest flow',
@@ -113,6 +117,7 @@ const PINS = [
   },
   {
     id: 'hiline',
+    fromBasecamp: '24 mi · 45 min from basecamp',
     category: 'mtb',
     name: 'Hiline Trail',
     short: 'MTB — DOUBLE BLACK, exposure',
@@ -136,6 +141,7 @@ const PINS = [
   },
   {
     id: 'hangover',
+    fromBasecamp: '22 mi · 42 min from basecamp',
     category: 'mtb',
     name: 'Hangover Trail',
     short: 'MTB — HARDEST in Sedona',
@@ -159,6 +165,7 @@ const PINS = [
   },
   {
     id: 'broken-arrow-mtb',
+    fromBasecamp: '22 mi · 40 min from basecamp',
     category: 'mtb',
     name: 'Broken Arrow → Hogs',
     short: 'MTB — Expert, techy red rock',
@@ -180,10 +187,143 @@ const PINS = [
       { label: 'Triple H Guide', url: 'https://57hours.com/review/sedona-mountain-bike-trails/' }
     ]
   },
+  {
+    id: 'slim-shady',
+    fromBasecamp: '24 mi · 43 min from basecamp',
+    category: 'mtb',
+    name: 'Slim Shady',
+    short: 'MTB — Intermediate flow classic',
+    lat: 34.8260,
+    lng: -111.7773,
+    difficulty: 'Intermediate (Blue)',
+    distance: '2.3 mi one-way',
+    description: `Pure flow trail south of Bell Rock — bermed turns, rollers, and a few small drops on grippy red dirt. One of the best "intro to Sedona" rides for an intermediate group. Often linked with HT + Templeton for a longer Yavapai-area loop. Drains well — usually rideable when the high-altitude clay is sticky.`,
+    tips: [
+      'Best ridden top-down from Bell Rock TH',
+      'Connects to HT and Llama for a full loop',
+      'Crowded weekends — go midweek or early'
+    ],
+    youtube: 'https://www.youtube.com/embed/qCSTNUheiFY',
+    youtubeTitle: 'Sedona Intermediate MTB POV',
+    links: [
+      { label: 'Trailforks: Slim Shady', url: 'https://www.trailforks.com/trails/slim-shady/' }
+    ]
+  },
+  {
+    id: 'llama',
+    fromBasecamp: '25 mi · 45 min from basecamp',
+    category: 'mtb',
+    name: 'Llama Trail',
+    short: 'MTB — Intermediate flow with tech bits',
+    lat: 34.8049,
+    lng: -111.7784,
+    difficulty: 'Intermediate (Blue)',
+    distance: '3.2 mi',
+    description: `Sweeping intermediate single in the Yavapai trail network. Mostly flow with a handful of rocky pinch points that keep you honest. Pairs well with HT, Templeton, and Made in the Shade for a 12-15 mile loop day. More character than your average flow trail without crossing into expert territory.`,
+    tips: [
+      'Park at Yavapai Vista or HT trailhead',
+      'Ride as part of a Yavapai-area loop',
+      'Lots of intersections — bring an offline map'
+    ],
+    youtube: 'https://www.youtube.com/embed/qCSTNUheiFY',
+    youtubeTitle: 'Sedona MTB POV',
+    links: [
+      { label: 'Trailforks: Llama', url: 'https://www.trailforks.com/trails/llama-67225/' }
+    ]
+  },
+  {
+    id: 'templeton',
+    fromBasecamp: '22 mi · 40 min from basecamp',
+    category: 'mtb',
+    name: 'Templeton',
+    short: 'MTB — Cathedral Rock views',
+    lat: 34.8351,
+    lng: -111.7977,
+    difficulty: 'Intermediate (Blue)',
+    distance: '3.9 mi one-way',
+    description: `One of the most photographed intermediate trails in the U.S. — runs along the base of Cathedral Rock with constant red rock views. Some exposure and technical slickrock features, but stays at intermediate grade overall. The standard descent option off the Hiline loop. Combine with Baldwin + HT for the classic Yavapai-to-Cathedral linkup.`,
+    tips: [
+      'Park at Yavapai Vista TH (south) or Bell Rock (north)',
+      'Photo stop: the singletrack directly below Cathedral',
+      'Pairs with Hiline as the descent option'
+    ],
+    youtube: 'https://www.youtube.com/embed/qCSTNUheiFY',
+    youtubeTitle: 'Sedona MTB POV — Templeton',
+    links: [
+      { label: 'Trailforks: Templeton', url: 'https://www.trailforks.com/trails/templeton/' }
+    ]
+  },
+  {
+    id: 'hog-wash',
+    fromBasecamp: '22 mi · 42 min from basecamp',
+    category: 'mtb',
+    name: 'Hog Wash',
+    short: 'MTB — Expert tech, exposure',
+    lat: 34.8639,
+    lng: -111.7456,
+    difficulty: 'Expert (Black/Double Black)',
+    distance: '~3 mi',
+    description: `Part of the famous "Hogs" trio — Hog Wash gets into the gnarliest exposure of the three. Technical slickrock with cliff-edge sections and a few mandatory commits. Best ridden after warming up on Cow Pies or Mitten Ridge. Pairs with Hangover or Broken Arrow for a full Triple H day.`,
+    tips: [
+      '⚠️ Real exposure — comparable to Hangover',
+      'Access via Munds Wagon TH off Schnebly Hill Rd',
+      'Best ridden in the morning before Jeep tour traffic'
+    ],
+    youtube: 'https://www.youtube.com/embed/AnLyfbSMLFs',
+    youtubeTitle: 'Sedona Expert MTB POV',
+    links: [
+      { label: 'Trailforks: Hog Wash', url: 'https://www.trailforks.com/trails/hog-wash/' }
+    ]
+  },
+  {
+    id: 'western-civ',
+    fromBasecamp: '28 mi · 48 min from basecamp',
+    category: 'mtb',
+    name: 'Western Civilization → Lime Kiln',
+    short: 'MTB — Long Verde Valley flow',
+    lat: 34.7892,
+    lng: -111.8025,
+    difficulty: 'Intermediate (Blue)',
+    distance: '~12 mi one-way',
+    description: `Long flowy connector that drops out of the high country down into Verde Valley — bigger views, smaller crowds, and zero technical surprises. A great "rest day" ride that still feels like an adventure. Shuttle-able if you can spot a truck at Dead Horse Ranch State Park.`,
+    tips: [
+      'Best as a one-way shuttle ride',
+      'Quieter than the in-town Sedona trails',
+      'Long — bring extra water and snacks'
+    ],
+    youtube: 'https://www.youtube.com/embed/qCSTNUheiFY',
+    youtubeTitle: 'Sedona MTB POV',
+    links: [
+      { label: 'Trailforks: Lime Kiln', url: 'https://www.trailforks.com/region/sedona/' }
+    ]
+  },
+  {
+    id: 'girdner',
+    fromBasecamp: '10 mi · 22 min from basecamp',
+    category: 'mtb',
+    name: 'Girdner Trail',
+    short: 'MTB — Intermediate desert single',
+    lat: 34.8898,
+    lng: -111.7984,
+    difficulty: 'Intermediate (Blue)',
+    distance: '~5 mi',
+    description: `Underrated intermediate single threading the desert north of west Sedona. Rolling terrain, occasional wash crossings, a handful of techy pinches. Connects the Aerie/Chuckwagon network on the west to the Dry Creek network on the east — useful linkage for "all-day" loop builders.`,
+    tips: [
+      'Park at Andante TH or Aerie',
+      'Use as a connector — not usually a destination on its own',
+      'Watch for cow patties in spring'
+    ],
+    youtube: 'https://www.youtube.com/embed/qCSTNUheiFY',
+    youtubeTitle: 'Sedona Intermediate MTB POV',
+    links: [
+      { label: 'Trailforks: Girdner', url: 'https://www.trailforks.com/trails/girdner/' }
+    ]
+  },
 
   // E-DIRT BIKE / OHV
   {
     id: 'outlaw-ohv',
+    fromBasecamp: '6 mi · 18 min from basecamp',
     category: 'ohv',
     name: 'Outlaw Trail (OHV)',
     short: 'E-Dirt Bike — 10.5 mi loop',
@@ -207,6 +347,7 @@ const PINS = [
   },
   {
     id: 'diamondback',
+    fromBasecamp: '1 mi · 3 min from basecamp (ride from tent)',
     category: 'ohv',
     name: 'Diamondback Gulch (OHV)',
     short: 'E-Dirt Bike — Nature\'s rollercoaster',
@@ -229,6 +370,7 @@ const PINS = [
   },
   {
     id: 'broken-arrow-ohv',
+    fromBasecamp: '22 mi · 40 min from basecamp',
     category: 'ohv',
     name: 'Broken Arrow (OHV)',
     short: 'E-Dirt Bike — THE Sedona ride',
@@ -253,6 +395,7 @@ const PINS = [
   },
   {
     id: 'schnebly-ohv',
+    fromBasecamp: '35 mi · 55 min from basecamp (I-17 side entry)',
     category: 'ohv',
     name: 'Schnebly Hill Rd (OHV)',
     short: 'E-Dirt Bike — Long cruise to the rim',
@@ -273,10 +416,99 @@ const PINS = [
       { label: 'Coconino NF Info', url: 'http://www.fs.usda.gov/recarea/coconino/recarea/?recid=55036&actid=64' }
     ]
   },
+  {
+    id: 'soldier-pass-ohv',
+    fromBasecamp: '18 mi · 32 min from basecamp',
+    category: 'ohv',
+    name: 'Soldier Pass 4WD (FR9904)',
+    short: 'E-Dirt Bike — Devil\'s Kitchen access',
+    lat: 34.8826,
+    lng: -111.7825,
+    difficulty: 'Advanced OHV',
+    distance: '4 mi RT',
+    description: `Rocky 4WD road that doubles as the OHV access to Devil's Kitchen sinkhole and Seven Sacred Pools. More technical than it looks — boulder gardens and step-ups that gate out lifted Jeeps. Same red rock scenery as the hiking trail but seen at e-bike pace.`,
+    tips: [
+      '⚠️ Trailer in — Sur-Ron/Talaria not street legal in town',
+      'Hiker traffic is heavy — go early',
+      'Turnaround at Devil\'s Kitchen — beyond is wilderness, no OHV'
+    ],
+    youtube: 'https://www.youtube.com/embed/2RFZqFN_cmo',
+    youtubeTitle: 'Sedona Off-Road — Soldier Pass',
+    links: [
+      { label: 'Coconino NF Info', url: 'https://www.fs.usda.gov/recarea/coconino/recarea/?recid=55392' }
+    ]
+  },
+  {
+    id: 'sycamore-pass',
+    fromBasecamp: '5 mi · 15 min from basecamp (direct on FR525)',
+    category: 'ohv',
+    name: 'Sycamore Pass Rd (FR525C)',
+    short: 'E-Dirt Bike — Cruise from basecamp',
+    lat: 34.9482,
+    lng: -111.9472,
+    difficulty: 'Easy OHV',
+    distance: '~14 mi one-way',
+    description: `Easy graded dirt road continuation north of basecamp — links FR525 to the Sycamore Canyon Wilderness boundary. Big sky, big views into Sycamore Canyon, very little traffic. Perfect "wake-up" cruise or a rainy-day backup when the technical OHV is muddy. Loops back via FR761 / FR153 if you want a full day.`,
+    tips: [
+      'Direct from basecamp — no trailer needed',
+      'Easy enough for first-time riders',
+      'Sycamore Vista overlook is the turnaround photo'
+    ],
+    youtube: 'https://www.youtube.com/embed/2RFZqFN_cmo',
+    youtubeTitle: 'Sedona Off-Road',
+    links: [
+      { label: 'Coconino NF Info', url: 'https://www.fs.usda.gov/r03/coconino/recreation/sedona-area-ohv-routes' }
+    ]
+  },
+  {
+    id: 'van-deren',
+    fromBasecamp: '8 mi · 18 min from basecamp',
+    category: 'ohv',
+    name: 'Van Deren Cabin Loop (FR152)',
+    short: 'E-Dirt Bike — Historic + technical',
+    lat: 34.8927,
+    lng: -111.8364,
+    difficulty: 'Moderate OHV',
+    distance: '~7 mi loop',
+    description: `Combines easy forest road cruising with a few proper technical sections through Dry Creek and past the historic Van Deren homestead. Mixed terrain — rocky climbs, sandy washes, loose descents. Good intermediate practice before tackling Broken Arrow or Hangover OHV terrain.`,
+    tips: [
+      '⚠️ Wash crossings can be deep after rain',
+      'Pair with Diamondback for a full day from basecamp',
+      'Historic markers along the route'
+    ],
+    youtube: 'https://www.youtube.com/embed/2RFZqFN_cmo',
+    youtubeTitle: 'Sedona Off-Road',
+    links: [
+      { label: 'Coconino NF Info', url: 'https://www.fs.usda.gov/r03/coconino/recreation/sedona-area-ohv-routes' }
+    ]
+  },
+  {
+    id: 'last-frontier',
+    fromBasecamp: '25 mi · 45 min from basecamp',
+    category: 'ohv',
+    name: 'Last Frontier 4WD',
+    short: 'E-Dirt Bike — Quiet technical loop',
+    lat: 34.8472,
+    lng: -111.7341,
+    difficulty: 'Moderate OHV',
+    distance: '~6 mi',
+    description: `Lesser-known east Sedona 4WD route that escapes the Pink Jeep parade on Broken Arrow. Mixed slickrock and rocky climbs with sweeping views into Bear Wallow Canyon. A solid "almost-Broken-Arrow" day without the crowds.`,
+    tips: [
+      '⚠️ Trailer in from basecamp',
+      'Quieter than Broken Arrow with the same red rock terrain',
+      'Pair with Schnebly Hill for a full east-side day'
+    ],
+    youtube: 'https://www.youtube.com/embed/2RFZqFN_cmo',
+    youtubeTitle: 'Sedona Off-Road',
+    links: [
+      { label: 'Coconino NF Info', url: 'https://www.fs.usda.gov/r03/coconino/recreation/sedona-area-ohv-routes' }
+    ]
+  },
 
   // HIKING
   {
     id: 'cathedral',
+    fromBasecamp: '22 mi · 40 min from basecamp',
     category: 'hike',
     name: 'Cathedral Rock',
     short: 'Hike — Iconic, sunset must',
@@ -300,6 +532,7 @@ const PINS = [
   },
   {
     id: 'devils-bridge',
+    fromBasecamp: '11 mi · 25 min from basecamp',
     category: 'hike',
     name: 'Devil\'s Bridge',
     short: 'Hike — Iconic arch, 4.2 mi',
@@ -323,6 +556,7 @@ const PINS = [
   },
   {
     id: 'boynton',
+    fromBasecamp: '7 mi · 15 min from basecamp',
     category: 'hike',
     name: 'Boynton Canyon → Subway Cave',
     short: 'Hike — 6 mi, the Subway Cave',
@@ -345,6 +579,7 @@ const PINS = [
   },
   {
     id: 'soldier-pass',
+    fromBasecamp: '18 mi · 32 min from basecamp',
     category: 'hike',
     name: 'Soldier Pass',
     short: 'Hike — Caves + Pools, 4.5 mi',
@@ -367,6 +602,7 @@ const PINS = [
   },
   {
     id: 'bell-rock',
+    fromBasecamp: '25 mi · 45 min from basecamp',
     category: 'hike',
     name: 'Bell Rock Pathway',
     short: 'Hike — Easy, scramble optional',
@@ -388,6 +624,7 @@ const PINS = [
   },
   {
     id: 'fay-canyon',
+    fromBasecamp: '5 mi · 12 min from basecamp',
     category: 'hike',
     name: 'Fay Canyon',
     short: 'Hike — Quiet sleeper pick',
@@ -404,6 +641,169 @@ const PINS = [
     youtube: null,
     links: [
       { label: 'Trail Info', url: 'https://www.fs.usda.gov/recarea/coconino/recarea/?recid=55296' }
+    ]
+  },
+  {
+    id: 'west-fork',
+    fromBasecamp: '32 mi · 55 min from basecamp',
+    category: 'hike',
+    name: 'West Fork of Oak Creek',
+    short: 'Hike — Stream crossings, fall colors',
+    lat: 34.9909,
+    lng: -111.7472,
+    difficulty: 'Moderate',
+    distance: '6.4 mi RT',
+    description: `Sedona's all-time classic hike — a flat-ish creek-bottom walk through a red rock slot corridor with 13+ stream crossings and stands of yellow bigtooth maple lighting up in late October. Drive ~30 min north up Oak Creek Canyon. <strong>Peak fall color: third week of October — that's exactly when you're here.</strong>`,
+    tips: [
+      'Bring water shoes or be ready for wet feet',
+      '$12 day-use fee at the trailhead',
+      'Go on a weekday — fall foliage = packed parking',
+      'Turnaround when you want — the hike-in is the destination'
+    ],
+    youtube: 'https://www.youtube.com/embed/Kn6Bd6eklS8',
+    youtubeTitle: 'Sedona Hiking Guide',
+    links: [
+      { label: 'Coconino NF Info', url: 'https://www.fs.usda.gov/recarea/coconino/recarea/?recid=55410' },
+      { label: 'AllTrails', url: 'https://www.alltrails.com/trail/us/arizona/west-fork-trail-oak-creek' }
+    ]
+  },
+  {
+    id: 'birthing-cave',
+    fromBasecamp: '11 mi · 22 min from basecamp',
+    category: 'hike',
+    name: 'Birthing Cave',
+    short: 'Hike — Short iconic photo cave',
+    lat: 34.8889,
+    lng: -111.8230,
+    difficulty: 'Easy + final scramble',
+    distance: '2 mi RT',
+    description: `Short flat walk-in followed by a steep slickrock scramble up to a curved hollow cave with one of the most iconic photo angles in Sedona. <strong>Vortex site.</strong> Often paired with the Long Canyon Trail as a half-day. Doable from basecamp in 10 minutes.`,
+    tips: [
+      'Photo line at the cave can be 10-15 min mid-day',
+      'Final scramble is moderately exposed — take the right side',
+      'Park at Long Canyon TH off Long Canyon Rd',
+      'Hike at sunrise or after 3pm for best light'
+    ],
+    youtube: 'https://www.youtube.com/embed/Kn6Bd6eklS8',
+    youtubeTitle: 'Sedona Hiking Guide',
+    links: [
+      { label: 'AllTrails', url: 'https://www.alltrails.com/trail/us/arizona/birthing-cave' }
+    ]
+  },
+  {
+    id: 'doe-mountain',
+    fromBasecamp: '3 mi · 8 min from basecamp',
+    category: 'hike',
+    name: 'Doe Mountain',
+    short: 'Hike — Mesa-top sunset, 1.6 mi',
+    lat: 34.8927,
+    lng: -111.8740,
+    difficulty: 'Moderate (short steep)',
+    distance: '1.6 mi RT',
+    description: `Steep switchbacks up the side of Doe Mountain mesa, then a flat plateau on top with a 360° view of the entire west Sedona red rock fortress. <strong>One of the best sunset hikes in Sedona</strong> — and the trailhead is literally next to basecamp. The top is exposed; wind can be brutal.`,
+    tips: [
+      'Walking distance from basecamp',
+      'Sunset is the move — bring a headlamp for descent',
+      'Top is a big flat mesa — wander for 20 min before heading down',
+      'Wind on top is no joke — bring a layer'
+    ],
+    youtube: 'https://www.youtube.com/embed/Kn6Bd6eklS8',
+    youtubeTitle: 'Sedona Hiking Guide',
+    links: [
+      { label: 'AllTrails', url: 'https://www.alltrails.com/trail/us/arizona/doe-mountain' }
+    ]
+  },
+  {
+    id: 'bear-mountain',
+    fromBasecamp: '3 mi · 10 min from basecamp',
+    category: 'hike',
+    name: 'Bear Mountain',
+    short: 'Hike — Strenuous, 1,900 ft climb',
+    lat: 34.9094,
+    lng: -111.8753,
+    difficulty: 'Hard',
+    distance: '5 mi RT',
+    description: `The hardest mainstream hike in Sedona — relentless climbing with several false summits and real scrambling on slickrock pitches. Massive views across to Boynton, Doe Mountain, and the entire Mogollon Rim. <strong>Plan a full day — start before 8am.</strong> Trailhead is 5 minutes from basecamp.`,
+    tips: [
+      'Bring 3+ liters of water per person',
+      'Multiple false summits — keep going to the real top',
+      'Sun-exposed top to bottom — no shade',
+      'Best in October temps — would be brutal in summer'
+    ],
+    youtube: 'https://www.youtube.com/embed/Kn6Bd6eklS8',
+    youtubeTitle: 'Sedona Hiking Guide',
+    links: [
+      { label: 'AllTrails', url: 'https://www.alltrails.com/trail/us/arizona/bear-mountain-trail' }
+    ]
+  },
+  {
+    id: 'airport-mesa',
+    fromBasecamp: '18 mi · 32 min from basecamp',
+    category: 'hike',
+    name: 'Airport Mesa Loop',
+    short: 'Hike — Easy vortex sunset loop',
+    lat: 34.8508,
+    lng: -111.7905,
+    difficulty: 'Easy',
+    distance: '3.3 mi loop',
+    description: `Easy loop around the perimeter of Airport Mesa with the most accessible sunset view in town. Includes the <strong>Airport Mesa Vortex</strong> — a short spur up a slickrock ridge for the energy-work folks. Great for jet-lagged arrival day or for resting tired legs mid-trip.`,
+    tips: [
+      'Sunset crowds at the overlook — go for the loop, skip the lot',
+      'Vortex spur is short and worth it',
+      '$3 paid parking at the upper lot',
+      'Combine with dinner in west Sedona after'
+    ],
+    youtube: 'https://www.youtube.com/embed/Kn6Bd6eklS8',
+    youtubeTitle: 'Sedona Hiking Guide',
+    links: [
+      { label: 'AllTrails', url: 'https://www.alltrails.com/trail/us/arizona/airport-loop-trail' }
+    ]
+  },
+  {
+    id: 'brins-mesa',
+    fromBasecamp: '19 mi · 35 min from basecamp',
+    category: 'hike',
+    name: 'Brins Mesa',
+    short: 'Hike — Mesa top with backside loops',
+    lat: 34.9006,
+    lng: -111.7642,
+    difficulty: 'Moderate',
+    distance: '4.5 mi RT',
+    description: `Climbs onto Brins Mesa for sweeping views of north Sedona and the Wilson Mountain massif. Can be looped with <strong>Soldier Pass on the back side</strong> for an 8-mile day that hits Devil's Kitchen, the pools, and the cave. Smart way to escape the front-side crowds while seeing the same landmarks.`,
+    tips: [
+      'Park at Jim Thompson TH (smaller, quieter than Soldier Pass)',
+      'Loop with Soldier Pass for the full landmark tour',
+      'Mostly exposed — start early'
+    ],
+    youtube: 'https://www.youtube.com/embed/Kn6Bd6eklS8',
+    youtubeTitle: 'Sedona Hiking Guide',
+    links: [
+      { label: 'AllTrails', url: 'https://www.alltrails.com/trail/us/arizona/brins-mesa-trail' }
+    ]
+  },
+  {
+    id: 'slide-rock',
+    fromBasecamp: '28 mi · 50 min from basecamp',
+    category: 'hike',
+    name: 'Slide Rock State Park',
+    short: 'Destination — Natural rock waterslides',
+    lat: 34.9420,
+    lng: -111.7530,
+    difficulty: 'Easy',
+    distance: 'Park grounds + short trails',
+    description: `Iconic Oak Creek destination — a natural sandstone chute polished smooth into a series of waterslides through the orchards of an old apple homestead. Adjacent short trails (Pendley Homestead, Clifftop Nature Trail) for a leg-stretch. <strong>October is shoulder season</strong>: water will be cold and crowds way thinner than summer, but the orchards are picking and the foliage is at peak. Bring grippy water shoes — that slickrock is no joke.`,
+    tips: [
+      '$20-30/vehicle entry depending on season',
+      'Drive: ~30 min north up Oak Creek Canyon (Hwy 89A)',
+      'Water is COLD in October — fine for a quick send, not a long swim',
+      'Pair with West Fork (5 min further north) for a full canyon day',
+      'Apple-picking happens late Sep through late Oct'
+    ],
+    youtube: 'https://www.youtube.com/embed/Kn6Bd6eklS8',
+    youtubeTitle: 'Sedona Hiking & Destinations',
+    links: [
+      { label: 'AZ State Parks: Slide Rock', url: 'https://azstateparks.com/slide-rock' },
+      { label: 'Park Map & Hours', url: 'https://azstateparks.com/slide-rock/explore/maps' }
     ]
   }
 ];

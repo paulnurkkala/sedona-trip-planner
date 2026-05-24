@@ -94,6 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="popup-short">${CATEGORIES[pin.category].label}</div>
       <strong>${pin.name}</strong>
       ${pin.distance ? `<div style="font-size: 0.85rem; color: #6b4423; margin-bottom: 0.4rem;">${pin.distance}${pin.difficulty ? ' · ' + pin.difficulty : ''}</div>` : ''}
+      ${pin.fromBasecamp ? `<div class="popup-basecamp">⛺ ${pin.fromBasecamp}</div>` : ''}
       <div style="font-size: 0.9rem; line-height: 1.4; color: #2b1810; margin-bottom: 0.5rem;">${pin.short || ''}</div>
       <a class="popup-btn" href="#" data-pin-id="${pin.id}">Open details →</a>
     `;
@@ -133,6 +134,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (pin.distance)   metaItems.push(`<span>↔ ${pin.distance}</span>`);
     metaItems.push(`<span>⊕ ${pin.lat.toFixed(4)}, ${pin.lng.toFixed(4)}</span>`);
 
+    const basecampBanner = pin.fromBasecamp
+      ? `<div class="modal__basecamp">⛺ ${pin.fromBasecamp}</div>`
+      : '';
+
     const tipsHtml = (pin.tips && pin.tips.length) ? `
       <div class="modal__tips">
         <div class="modal__tips-title">Field Notes</div>
@@ -158,6 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="modal__cat" style="background:${cat.color}">${cat.icon} ${cat.label}</div>
       <h2 class="modal__title">${pin.name}</h2>
       <div class="modal__meta">${metaItems.join('')}</div>
+      ${basecampBanner}
       <div class="modal__desc">${pin.description}</div>
       ${tipsHtml}
       ${videoHtml}

@@ -7,7 +7,7 @@ An interactive satellite map with mountain biking, electric dirt bike (OHV), and
 ## Features
 
 - Full-screen satellite map (Google satellite tiles, hybrid + pure satellite + terrain modes)
-- 18 hand-curated pins across 5 categories: Basecamp, Bike Shop, Mountain Bike, E-Dirt Bike (OHV), Hike
+- 35 hand-curated pins across 5 categories: Basecamp, Bike Shop, Mountain Bike, E-Dirt Bike (OHV), Hike — with drive time + distance from basecamp on every activity pin
 - Click any pin → detailed modal with description, field notes, embedded POV YouTube video, and external links (USFS, AllTrails, Trailforks, directions)
 - Legend doubles as a category filter — click "Mountain Bike" to zoom to all MTB pins
 - Editorial design with custom fonts (Bebas Neue + Fraunces + DM Mono)
