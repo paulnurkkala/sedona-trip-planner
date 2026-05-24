@@ -72,9 +72,12 @@ document.addEventListener('DOMContentLoaded', () => {
       ? `<div class="pin-star" title="Suggested by friends & family">★</div>`
       : '';
 
-    // MTB: standalone bicycle silhouette, no colored teardrop background
+    // MTB: standalone bicycle silhouette, no colored teardrop background.
+    // Anchor at the wheel line (cy=17.5 in viewBox 0-24 → ~73% down),
+    // so the pin "sits at" the lat/lng intuitively even when zooming.
     if (category === 'mtb') {
       const size = 42;
+      const anchorY = Math.round(size * (17.5 / 24));
       const bikeSvg = `
         <svg viewBox="0 0 24 24" width="${size}" height="${size}" fill="none" stroke="${color}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="18.5" cy="17.5" r="3.5" fill="#ffffff"/>
@@ -86,14 +89,16 @@ document.addEventListener('DOMContentLoaded', () => {
         className: 'sedona-pin sedona-pin--bike' + (pin.suggested ? ' sedona-pin--suggested' : ''),
         html: `<div class="pin-bike">${bikeSvg}${starBadge}</div>`,
         iconSize: [size, size],
-        iconAnchor: [size / 2, size / 2],
-        popupAnchor: [0, -size / 2 + 2]
+        iconAnchor: [size / 2, anchorY],
+        popupAnchor: [0, -anchorY + 2]
       });
     }
 
-    // OHV: standalone dirt-bike silhouette in orange, no background pill
+    // OHV: standalone dirt-bike silhouette in orange, no background pill.
+    // Same wheel-line anchor as MTB.
     if (category === 'ohv') {
       const size = 42;
+      const anchorY = Math.round(size * (17.5 / 24));
       const motoSvg = `
         <svg viewBox="0 0 24 24" width="${size}" height="${size}" fill="none" stroke="${color}" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="5.5" cy="17.5" r="3.8" fill="#ffffff"/>
@@ -106,21 +111,25 @@ document.addEventListener('DOMContentLoaded', () => {
         className: 'sedona-pin sedona-pin--moto' + (pin.suggested ? ' sedona-pin--suggested' : ''),
         html: `<div class="pin-bike pin-moto">${motoSvg}${starBadge}</div>`,
         iconSize: [size, size],
-        iconAnchor: [size / 2, size / 2],
-        popupAnchor: [0, -size / 2 + 2]
+        iconAnchor: [size / 2, anchorY],
+        popupAnchor: [0, -anchorY + 2]
       });
     }
 
     const isBasecamp = category === 'basecamp';
     const klass = isBasecamp ? 'pin-marker pin-marker--basecamp' : 'pin-marker';
     const size = isBasecamp ? 44 : 36;
+    // The teardrop is a square rotated -45deg. After rotation, the visual
+    // tip extends below the box by size*(√2/2 - 0.5) ≈ size*0.207. Anchor
+    // there so the tip actually points to the lat/lng at any zoom.
+    const anchorY = Math.round(size * 1.207);
 
     return L.divIcon({
       className: 'sedona-pin' + (pin.suggested ? ' sedona-pin--suggested' : ''),
       html: `<div class="${klass}" style="background:${color}"><div class="pin-marker__inner">${icon}</div></div>${starBadge}`,
       iconSize: [size, size],
-      iconAnchor: [size / 2, size],
-      popupAnchor: [0, -size + 6]
+      iconAnchor: [size / 2, anchorY],
+      popupAnchor: [0, -anchorY + 6]
     });
   }
 
