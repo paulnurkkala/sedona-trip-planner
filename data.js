@@ -63,7 +63,7 @@ const PINS = [
       'Extend via Dawa → Arizona Cypress for a full "Dry Creek Loop"',
       'Great views across to Boynton spires'
     ],
-    youtube: 'https://www.youtube.com/embed/qCSTNUheiFY',
+    youtube: null,
     youtubeTitle: 'Sedona MTB POV — connecting trails',
     links: [
       { label: 'Trailforks: Aerie', url: 'https://www.trailforks.com/region/sedona/' },
@@ -86,7 +86,7 @@ const PINS = [
       'Combine with Chuckwagon for a true Sedona flow day',
       'Connects to Devil\'s Bridge — bring shoes if you want to hike it after'
     ],
-    youtube: 'https://www.youtube.com/embed/qCSTNUheiFY',
+    youtube: null,
     youtubeTitle: 'Sedona MTB POV',
     links: [
       { label: 'AllTrails: Mescal', url: 'https://www.alltrails.com/us/arizona/sedona/mountain-biking' },
@@ -109,7 +109,7 @@ const PINS = [
       'Pedal in to Devil\'s Bridge to skip the hiker traffic',
       'Best ridden as part of a Mescal/Chuckwagon/Aerie loop'
     ],
-    youtube: 'https://www.youtube.com/embed/qCSTNUheiFY',
+    youtube: null,
     youtubeTitle: 'Sedona Intermediate MTB POV',
     links: [
       { label: 'Trail Map', url: 'https://www.alltrails.com/us/arizona/sedona/mountain-biking' }
@@ -132,7 +132,7 @@ const PINS = [
       'Climb up Hiline (it\'s techy but rideable), descend the loop',
       'Hardtail Party / BKXC have great walkthrough videos'
     ],
-    youtube: 'https://www.youtube.com/embed/qCSTNUheiFY',
+    youtube: null,
     youtubeTitle: 'Hiline Trail POV — Sedona',
     links: [
       { label: 'Trailforks: Hiline', url: 'https://www.trailforks.com/trails/hiline/' },
@@ -180,7 +180,7 @@ const PINS = [
       'Chicken Point is a MUST stop for photos',
       'Combine with the Hogs for a full expert day'
     ],
-    youtube: 'https://www.youtube.com/embed/AnLyfbSMLFs',
+    youtube: null,
     youtubeTitle: 'Sedona Expert MTB POV',
     links: [
       { label: 'Coconino NF: Broken Arrow', url: 'https://www.fs.usda.gov/recarea/coconino/recarea/?recid=55250' },
@@ -203,7 +203,7 @@ const PINS = [
       'Connects to HT and Llama for a full loop',
       'Crowded weekends — go midweek or early'
     ],
-    youtube: 'https://www.youtube.com/embed/qCSTNUheiFY',
+    youtube: null,
     youtubeTitle: 'Sedona Intermediate MTB POV',
     links: [
       { label: 'Trailforks: Slim Shady', url: 'https://www.trailforks.com/trails/slim-shady/' }
@@ -225,7 +225,7 @@ const PINS = [
       'Ride as part of a Yavapai-area loop',
       'Lots of intersections — bring an offline map'
     ],
-    youtube: 'https://www.youtube.com/embed/qCSTNUheiFY',
+    youtube: null,
     youtubeTitle: 'Sedona MTB POV',
     links: [
       { label: 'Trailforks: Llama', url: 'https://www.trailforks.com/trails/llama-67225/' }
@@ -247,7 +247,7 @@ const PINS = [
       'Photo stop: the singletrack directly below Cathedral',
       'Pairs with Hiline as the descent option'
     ],
-    youtube: 'https://www.youtube.com/embed/qCSTNUheiFY',
+    youtube: null,
     youtubeTitle: 'Sedona MTB POV — Templeton',
     links: [
       { label: 'Trailforks: Templeton', url: 'https://www.trailforks.com/trails/templeton/' }
@@ -269,7 +269,7 @@ const PINS = [
       'Access via Munds Wagon TH off Schnebly Hill Rd',
       'Best ridden in the morning before Jeep tour traffic'
     ],
-    youtube: 'https://www.youtube.com/embed/AnLyfbSMLFs',
+    youtube: null,
     youtubeTitle: 'Sedona Expert MTB POV',
     links: [
       { label: 'Trailforks: Hog Wash', url: 'https://www.trailforks.com/trails/hog-wash/' }
@@ -291,7 +291,7 @@ const PINS = [
       'Quieter than the in-town Sedona trails',
       'Long — bring extra water and snacks'
     ],
-    youtube: 'https://www.youtube.com/embed/qCSTNUheiFY',
+    youtube: null,
     youtubeTitle: 'Sedona MTB POV',
     links: [
       { label: 'Trailforks: Lime Kiln', url: 'https://www.trailforks.com/region/sedona/' }
@@ -313,7 +313,7 @@ const PINS = [
       'Use as a connector — not usually a destination on its own',
       'Watch for cow patties in spring'
     ],
-    youtube: 'https://www.youtube.com/embed/qCSTNUheiFY',
+    youtube: null,
     youtubeTitle: 'Sedona Intermediate MTB POV',
     links: [
       { label: 'Trailforks: Girdner', url: 'https://www.trailforks.com/trails/girdner/' }
@@ -432,7 +432,7 @@ const PINS = [
       'Hiker traffic is heavy — go early',
       'Turnaround at Devil\'s Kitchen — beyond is wilderness, no OHV'
     ],
-    youtube: 'https://www.youtube.com/embed/2RFZqFN_cmo',
+    youtube: null,
     youtubeTitle: 'Sedona Off-Road — Soldier Pass',
     links: [
       { label: 'Coconino NF Info', url: 'https://www.fs.usda.gov/recarea/coconino/recarea/?recid=55392' }
@@ -454,7 +454,7 @@ const PINS = [
       'Easy enough for first-time riders',
       'Sycamore Vista overlook is the turnaround photo'
     ],
-    youtube: 'https://www.youtube.com/embed/2RFZqFN_cmo',
+    youtube: null,
     youtubeTitle: 'Sedona Off-Road',
     links: [
       { label: 'Coconino NF Info', url: 'https://www.fs.usda.gov/r03/coconino/recreation/sedona-area-ohv-routes' }
@@ -476,7 +476,7 @@ const PINS = [
       'Pair with Diamondback for a full day from basecamp',
       'Historic markers along the route'
     ],
-    youtube: 'https://www.youtube.com/embed/2RFZqFN_cmo',
+    youtube: null,
     youtubeTitle: 'Sedona Off-Road',
     links: [
       { label: 'Coconino NF Info', url: 'https://www.fs.usda.gov/r03/coconino/recreation/sedona-area-ohv-routes' }
@@ -498,7 +498,7 @@ const PINS = [
       'Quieter than Broken Arrow with the same red rock terrain',
       'Pair with Schnebly Hill for a full east-side day'
     ],
-    youtube: 'https://www.youtube.com/embed/2RFZqFN_cmo',
+    youtube: null,
     youtubeTitle: 'Sedona Off-Road',
     links: [
       { label: 'Coconino NF Info', url: 'https://www.fs.usda.gov/r03/coconino/recreation/sedona-area-ohv-routes' }
@@ -571,7 +571,7 @@ const PINS = [
       'Closest icon to basecamp — start early',
       'Wildlife: mule deer, occasional bear'
     ],
-    youtube: 'https://www.youtube.com/embed/Kn6Bd6eklS8',
+    youtube: null,
     youtubeTitle: 'Sedona Hiking Guide',
     links: [
       { label: 'Coconino NF Info', url: 'https://www.fs.usda.gov/recarea/coconino/recarea/?recid=55242' }
@@ -594,7 +594,7 @@ const PINS = [
       'Caves are the highlight — keep going past the pools',
       'Final climb is moderate scrambling'
     ],
-    youtube: 'https://www.youtube.com/embed/Kn6Bd6eklS8',
+    youtube: null,
     youtubeTitle: 'Soldier Pass Hike Sedona',
     links: [
       { label: 'Coconino NF Info', url: 'https://www.fs.usda.gov/recarea/coconino/recarea/?recid=55392' }
@@ -660,7 +660,7 @@ const PINS = [
       'Go on a weekday — fall foliage = packed parking',
       'Turnaround when you want — the hike-in is the destination'
     ],
-    youtube: 'https://www.youtube.com/embed/Kn6Bd6eklS8',
+    youtube: null,
     youtubeTitle: 'Sedona Hiking Guide',
     links: [
       { label: 'Coconino NF Info', url: 'https://www.fs.usda.gov/recarea/coconino/recarea/?recid=55410' },
@@ -684,7 +684,7 @@ const PINS = [
       'Park at Long Canyon TH off Long Canyon Rd',
       'Hike at sunrise or after 3pm for best light'
     ],
-    youtube: 'https://www.youtube.com/embed/Kn6Bd6eklS8',
+    youtube: null,
     youtubeTitle: 'Sedona Hiking Guide',
     links: [
       { label: 'AllTrails', url: 'https://www.alltrails.com/trail/us/arizona/birthing-cave' }
@@ -707,7 +707,7 @@ const PINS = [
       'Top is a big flat mesa — wander for 20 min before heading down',
       'Wind on top is no joke — bring a layer'
     ],
-    youtube: 'https://www.youtube.com/embed/Kn6Bd6eklS8',
+    youtube: null,
     youtubeTitle: 'Sedona Hiking Guide',
     links: [
       { label: 'AllTrails', url: 'https://www.alltrails.com/trail/us/arizona/doe-mountain' }
@@ -730,7 +730,7 @@ const PINS = [
       'Sun-exposed top to bottom — no shade',
       'Best in October temps — would be brutal in summer'
     ],
-    youtube: 'https://www.youtube.com/embed/Kn6Bd6eklS8',
+    youtube: null,
     youtubeTitle: 'Sedona Hiking Guide',
     links: [
       { label: 'AllTrails', url: 'https://www.alltrails.com/trail/us/arizona/bear-mountain-trail' }
@@ -753,7 +753,7 @@ const PINS = [
       '$3 paid parking at the upper lot',
       'Combine with dinner in west Sedona after'
     ],
-    youtube: 'https://www.youtube.com/embed/Kn6Bd6eklS8',
+    youtube: null,
     youtubeTitle: 'Sedona Hiking Guide',
     links: [
       { label: 'AllTrails', url: 'https://www.alltrails.com/trail/us/arizona/airport-loop-trail' }
@@ -775,7 +775,7 @@ const PINS = [
       'Loop with Soldier Pass for the full landmark tour',
       'Mostly exposed — start early'
     ],
-    youtube: 'https://www.youtube.com/embed/Kn6Bd6eklS8',
+    youtube: null,
     youtubeTitle: 'Sedona Hiking Guide',
     links: [
       { label: 'AllTrails', url: 'https://www.alltrails.com/trail/us/arizona/brins-mesa-trail' }
@@ -799,7 +799,7 @@ const PINS = [
       'Pair with West Fork (5 min further north) for a full canyon day',
       'Apple-picking happens late Sep through late Oct'
     ],
-    youtube: 'https://www.youtube.com/embed/Kn6Bd6eklS8',
+    youtube: null,
     youtubeTitle: 'Sedona Hiking & Destinations',
     links: [
       { label: 'AZ State Parks: Slide Rock', url: 'https://azstateparks.com/slide-rock' },
