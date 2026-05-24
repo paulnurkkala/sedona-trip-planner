@@ -220,6 +220,7 @@ const PINS = [
   {
     id: 'llama',
     fromBasecamp: '25 mi · 45 min from basecamp',
+    favorite: true,
     category: 'mtb',
     name: 'Llama Trail',
     short: 'MTB — Intermediate flow with tech bits',
