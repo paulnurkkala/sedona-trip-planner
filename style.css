@@ -470,6 +470,139 @@ a:hover { color: var(--ember); }
 }
 .ride-list strong { color: var(--rust-deep); }
 
+/* ============================================
+   CREW — three participants, each with rig
+   ============================================ */
+.crew {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+.participant {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 1.75rem;
+  align-items: start;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--line);
+}
+.participant:first-child { border-top: none; padding-top: 0.5rem; }
+.participant__portrait {
+  width: 220px;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: var(--dust);
+  box-shadow: 0 6px 22px rgba(0,0,0,0.18);
+}
+.participant__portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.participant__name {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  letter-spacing: 0.01em;
+  line-height: 1;
+  margin: 0 0 0.4rem;
+  color: var(--rock);
+}
+.participant__handle {
+  font-family: var(--font-mono);
+  font-size: 0.7em;
+  color: var(--rust-deep);
+  letter-spacing: 0.02em;
+  margin-left: 0.4rem;
+  text-transform: none;
+}
+.participant__bio {
+  font-family: var(--font-serif);
+  font-size: 1.02rem;
+  line-height: 1.55;
+  color: var(--rock);
+  margin: 0 0 0.85rem;
+}
+.participant__socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 1.3rem;
+}
+.participant__socials a {
+  color: var(--rust-deep);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 1px;
+}
+.participant__socials a:hover { color: var(--rust); }
+.participant__socials--placeholder {
+  font-style: italic;
+  opacity: 0.7;
+  border-bottom-style: dashed !important;
+}
+.participant__rig {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.9rem;
+  background: var(--paper);
+  border-left: 3px solid var(--ember);
+  border-radius: 3px;
+}
+.participant__rig img {
+  width: 180px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 2px;
+  display: block;
+  background: var(--dust);
+}
+.participant__rig-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-family: var(--font-serif);
+  font-size: 0.92rem;
+  color: var(--rock);
+  line-height: 1.45;
+}
+.participant__rig-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ember);
+}
+.participant__rig-meta strong {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--rock);
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 720px) {
+  .participant {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+  .participant__portrait {
+    width: 100%;
+    height: 280px;
+  }
+  .participant__rig {
+    grid-template-columns: 1fr;
+  }
+  .participant__rig img { width: 100%; height: 180px; }
+}
+
 /* Clickable list items: click any to fly the map to that pin */
 .ride-list__item {
   padding: 0.85rem 0.85rem;
