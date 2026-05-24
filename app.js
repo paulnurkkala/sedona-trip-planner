@@ -67,6 +67,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const cat = CATEGORIES[category];
     const color = cat ? cat.color : '#666';
     const icon = cat ? cat.icon : '•';
+
+    // MTB: standalone bicycle silhouette, no colored teardrop background
+    if (category === 'mtb') {
+      const size = 42;
+      const bikeSvg = `
+        <svg viewBox="0 0 24 24" width="${size}" height="${size}" fill="none" stroke="${color}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="18.5" cy="17.5" r="3.5" fill="#ffffff"/>
+          <circle cx="5.5" cy="17.5" r="3.5" fill="#ffffff"/>
+          <circle cx="15" cy="5" r="1" fill="${color}"/>
+          <path d="M12 17.5V14l-3-3 5-4 2 3h2"/>
+        </svg>`;
+      return L.divIcon({
+        className: 'sedona-pin sedona-pin--bike',
+        html: `<div class="pin-bike">${bikeSvg}</div>`,
+        iconSize: [size, size],
+        iconAnchor: [size / 2, size / 2],
+        popupAnchor: [0, -size / 2 + 2]
+      });
+    }
+
     const isBasecamp = category === 'basecamp';
     const klass = isBasecamp ? 'pin-marker pin-marker--basecamp' : 'pin-marker';
     const size = isBasecamp ? 44 : 36;

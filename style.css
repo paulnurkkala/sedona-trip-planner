@@ -217,6 +217,23 @@ a:hover { color: var(--ember); }
 .pin-marker--basecamp { width: 44px; height: 44px; border-width: 3px; box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.3), 0 6px 18px rgba(0,0,0,0.5); }
 .pin-marker--basecamp .pin-marker__inner { font-size: 20px; }
 
+/* MTB pin: clean bike silhouette, no background pill */
+.pin-bike {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px; height: 42px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.pin-bike svg {
+  filter:
+    drop-shadow(0 0 2px rgba(255, 255, 255, 0.95))
+    drop-shadow(0 0 4px rgba(255, 255, 255, 0.7))
+    drop-shadow(0 2px 3px rgba(0, 0, 0, 0.55));
+}
+.pin-bike:hover { transform: scale(1.15); }
+
 .leaflet-popup-content-wrapper {
   background: var(--paper);
   border-radius: 6px;
