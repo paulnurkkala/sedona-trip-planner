@@ -14,7 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
     zoomControl: true,
     scrollWheelZoom: true,
     minZoom: 10,
-    maxZoom: 19
+    maxZoom: 19,
+    // Markers snap to new positions on zoom instead of animating —
+    // prevents the "flying around" perception during zoom transitions.
+    zoomAnimation: false,
+    markerZoomAnimation: false,
+    fadeAnimation: false
   });
 
   // GOOGLE SATELLITE tiles (hybrid: imagery + labels)
