@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sedona Trip — Bikes, Dirt & Trails</title>
+  <meta name="description" content="A week in Sedona — mountain biking, electric dirt bikes, hiking, and dispersed vehicle camping. Interactive satellite map with trails, descriptions, and POV videos." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="masthead">
+  <div class="masthead__grain"></div>
+  <div class="masthead__inner">
+    <div class="masthead__eyebrow">
+      <span class="dot"></span>
+      <span>OCT 15 — OCT 25, 2026 · COCONINO NF · 7 NIGHTS</span>
+    </div>
+    <h1 class="masthead__title">
+      <span class="title-line title-line--1">SEDONA</span>
+      <span class="title-line title-line--2">RED ROCK</span>
+      <span class="title-line title-line--3"><em>operations</em></span>
+    </h1>
+    <p class="masthead__sub">
+      A week of mountain biking, electric dirt biking, and hiking out of a dispersed basecamp on Forest Road 525. Eighteen pins. Satellite view. Click anything.
+    </p>
+    <div class="legend">
+      <div class="legend__item" data-cat="basecamp"><span class="legend__swatch" style="background:#d97706"></span>Basecamp</div>
+      <div class="legend__item" data-cat="mtb"><span class="legend__swatch" style="background:#dc2626"></span>Mountain Bike</div>
+      <div class="legend__item" data-cat="ohv"><span class="legend__swatch" style="background:#7c2d12"></span>E-Dirt Bike</div>
+      <div class="legend__item" data-cat="hike"><span class="legend__swatch" style="background:#16a34a"></span>Hike</div>
+      <div class="legend__item" data-cat="shop"><span class="legend__swatch" style="background:#0891b2"></span>Shop</div>
+    </div>
+  </div>
+</header>
+
+<!-- MAP -->
+<main class="map-section">
+  <div class="map-frame">
+    <div id="map"></div>
+    <div class="map-corner">
+      <div class="map-corner__label">SATELLITE · GOOGLE</div>
+    </div>
+  </div>
+</main>
+
+<!-- WEATHER + LOGISTICS BAND -->
+<section class="band">
+  <div class="band__grid">
+    <div class="band__card">
+      <div class="band__icon">☀</div>
+      <div class="band__num">67°<span>/44°</span></div>
+      <div class="band__label">Avg Day/Night, October</div>
+    </div>
+    <div class="band__card">
+      <div class="band__icon">☂</div>
+      <div class="band__num">5<span>/mo</span></div>
+      <div class="band__label">Avg rain days, October</div>
+    </div>
+    <div class="band__card">
+      <div class="band__icon">⏱</div>
+      <div class="band__num">6:00<span>pm</span></div>
+      <div class="band__label">Sunset mid-October</div>
+    </div>
+    <div class="band__card">
+      <div class="band__icon">⛺</div>
+      <div class="band__num">14<span>days</span></div>
+      <div class="band__label">Max dispersed camping</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY THIS WINDOW -->
+<section class="content">
+  <div class="content__inner">
+    <div class="kicker">01 / TIMING</div>
+    <h2>Target October 15–25.</h2>
+    <p class="lede">Mid-to-late October is the sweet spot. Days in the upper 60s to upper 70s, nights drop to mid-40s, with monsoon season fully done and winter chill not yet arrived.</p>
+    <p>
+      October in Sedona averages a high of <strong>67.1°F</strong> and a low of <strong>44.6°F</strong>, with only about <strong>5 days of rain</strong> totaling roughly half an inch (<a href="https://www.weather-atlas.com/en/arizona-usa/sedona-weather-october" target="_blank" rel="noopener">weather-atlas data</a>). The first half of the month still runs slightly warmer (occasional 80s) — the back half cools off enough for solid sleep in the rigs without overheating.
+    </p>
+    <p>
+      Get to camp <strong>Sunday through Tuesday</strong>. Spring and fall are Sedona's busy seasons — sites on FR 525 fill by Friday afternoon. Trailheads should be hit at sunrise.
+    </p>
+  </div>
+</section>
+
+<!-- BASECAMP -->
+<section class="content content--alt">
+  <div class="content__inner">
+    <div class="kicker">02 / BASECAMP</div>
+    <h2>Forest Road 525.</h2>
+    <p class="lede">Free dispersed camping on Coconino National Forest land, 10 miles SW of Sedona, central to almost everything.</p>
+    <p>
+      Loy Butte Rd / FR 525 has <strong>five designated dispersed camping areas</strong>: Surprise, Windmill, Cockscomb, Greasy Spoon, and Nolan. <strong>Nolan is the largest at ~12 acres</strong> — aim for it with the Promaster and F250. Graded dirt road, accessible for both rigs without 4WD. <a href="https://www.fs.usda.gov/r03/coconino/alerts/west-sedona-camping-and-campfire-restrictions" target="_blank" rel="noopener">Coconino NF info →</a>
+    </p>
+    <p>
+      No water, no toilets, no services. Showers in Cottonwood (20 min SW). Cell service is spotty — <a href="https://www.trailforks.com/region/sedona/" target="_blank" rel="noopener">download Trailforks</a> and <a href="https://www.onxmaps.com/offroad" target="_blank" rel="noopener">onX Offroad</a> for offline use.
+    </p>
+  </div>
+</section>
+
+<!-- MTB -->
+<section class="content">
+  <div class="content__inner">
+    <div class="kicker">03 / MOUNTAIN BIKING</div>
+    <h2>Five rides, beginner-friendly to bucket-list.</h2>
+    <p class="lede">Sedona is intermediate-to-expert country — the world's most photogenic slickrock with serious tech.</p>
+    <ul class="ride-list">
+      <li><strong>Aerie / Cockscomb Loop</strong> (intermediate, 6.1mi) — Day-1 shakedown, minutes from camp</li>
+      <li><strong>Mescal + Chuckwagon</strong> (intermediate flow) — Most photogenic intermediate ride in town</li>
+      <li><strong>Hiline</strong> (double-black) — Triple H. Exposed singletrack, no bailout. Loop via Baldwin → Templeton → Hermit</li>
+      <li><strong>Hangover</strong> (double-black) — <em>The hardest trail in Sedona.</em> Triple H. Don't ride tired.</li>
+      <li><strong>Broken Arrow → Hogs</strong> (expert) — Techy red rock, pedal to Chicken Point. Closed weekends per current FS hours.</li>
+    </ul>
+    <p>
+      Stop at <a href="https://www.thundermountainbikes.com/" target="_blank" rel="noopener">Thunder Mountain Bikes</a> on day 1 for current trail beta. Full Sedona MTB guide at <a href="https://www.twowheeledwanderer.com/posts/mountain-biking-sedona/" target="_blank" rel="noopener">Two Wheeled Wanderer</a> and the <a href="https://www.trailforks.com/region/sedona/" target="_blank" rel="noopener">Trailforks Sedona region</a>.
+    </p>
+  </div>
+</section>
+
+<!-- OHV -->
+<section class="content content--alt">
+  <div class="content__inner">
+    <div class="kicker">04 / E-DIRT BIKES</div>
+    <h2>Legal trails only. No singletrack.</h2>
+    <p class="lede warn"><strong>Important:</strong> Sur-Ron / Talaria-class e-dirt bikes are NOT classified as e-bikes in Coconino NF. They're treated as OHV / motorized vehicles.</p>
+    <p>
+      Per <a href="https://thundermountainbikes.com/pages/ebike-trails-in-sedona" target="_blank" rel="noopener">Thunder Mountain Bikes' official guidance</a>: <em>"eBikes are not permitted on ANY singletrack trails within the Coconino National Forest Red Rock District."</em> High-power throttle machines fall even more strictly into the OHV bucket. They are <strong>not street legal</strong> without registration — so you'll need to trailer them to OHV trailheads.
+    </p>
+    <ul class="ride-list">
+      <li><strong>Diamondback Gulch</strong> (advanced, 6mi loop) — Nature's rollercoaster. Ride from camp.</li>
+      <li><strong>Outlaw Trail</strong> (moderate, 10.5mi loop) — Honanki ruins, west canyon, lighter traffic</li>
+      <li><strong>Broken Arrow OHV</strong> (advanced, 4mi RT) — Devil's Staircase, Submarine Rock, Chicken Point. Best views in Sedona.</li>
+      <li><strong>Schnebly Hill Rd</strong> (moderate, 11mi one-way) — 2,200ft climb up the Mogollon Rim, endless spurs at the top</li>
+    </ul>
+    <p>
+      Full route list at <a href="https://www.fs.usda.gov/r03/coconino/recreation/sedona-area-ohv-routes" target="_blank" rel="noopener">Coconino NF — Sedona OHV Routes</a>. 15 mph speed limit, helmets required.
+    </p>
+  </div>
+</section>
+
+<!-- HIKING -->
+<section class="content">
+  <div class="content__inner">
+    <div class="kicker">05 / HIKING</div>
+    <h2>Six hikes, low to high commitment.</h2>
+    <ul class="ride-list">
+      <li><strong>Cathedral Rock</strong> — Non-negotiable. Sunset only. Free shuttle Thu-Sun, lot closed those days.</li>
+      <li><strong>Devil's Bridge</strong> — The arch. Sunrise to skip the photo line.</li>
+      <li><strong>Boynton Canyon → Subway Cave</strong> — Closest icon to camp.</li>
+      <li><strong>Soldier Pass</strong> — Devil's Kitchen + Seven Sacred Pools + Soldier Pass Cave</li>
+      <li><strong>Bell Rock</strong> — Easy + optional scramble. Good rest-day pick.</li>
+      <li><strong>Fay Canyon</strong> — Sleeper. Quiet, shaded, next to camp.</li>
+    </ul>
+    <p>
+      A <a href="https://www.fs.usda.gov/r03/coconino/passes-permits/recreation/red-rock-pass" target="_blank" rel="noopener">Red Rock Pass</a> is required at most trailheads ($5/day, $15/week). America the Beautiful pass also works. Full hiking list at <a href="https://www.alltrails.com/us/arizona/sedona" target="_blank" rel="noopener">AllTrails Sedona</a>.
+    </p>
+  </div>
+</section>
+
+<!-- 7 DAY -->
+<section class="content content--alt">
+  <div class="content__inner">
+    <div class="kicker">06 / SAMPLE WEEK</div>
+    <h2>Suggested 7-day flow.</h2>
+    <div class="days">
+      <div class="day"><span class="day__num">01</span><div><strong>Sun</strong> · Drive in, set up at FR 525 Nolan, shakedown ride <em>Aerie/Cockscomb</em>, sunset stroll up <em>Bell Rock</em></div></div>
+      <div class="day"><span class="day__num">02</span><div><strong>Mon</strong> · MTB <em>Mescal + Chuckwagon</em> loop, afternoon hike <em>Fay Canyon</em></div></div>
+      <div class="day"><span class="day__num">03</span><div><strong>Tue</strong> · E-dirt bikes — trailer to <em>Broken Arrow OHV</em>, full loop including Devil's Staircase</div></div>
+      <div class="day"><span class="day__num">04</span><div><strong>Wed</strong> · Sunrise <em>Devil's Bridge</em>, afternoon <em>Boynton Canyon → Subway Cave</em></div></div>
+      <div class="day"><span class="day__num">05</span><div><strong>Thu</strong> · MTB expert day — <em>Hiline</em> loop (or <em>Hangover</em> if the crew is dialed)</div></div>
+      <div class="day"><span class="day__num">06</span><div><strong>Fri</strong> · E-dirt bikes — <em>Diamondback Gulch + Outlaw + Ranch Loop</em> from camp</div></div>
+      <div class="day"><span class="day__num">07</span><div><strong>Sat</strong> · Morning <em>Soldier Pass</em>, <em>Cathedral Rock</em> for sunset, drive out Sunday AM</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CHECKLIST -->
+<section class="content">
+  <div class="content__inner">
+    <div class="kicker">07 / DON'T FORGET</div>
+    <h2>Logistics.</h2>
+    <ul class="checklist">
+      <li><strong>Red Rock Pass</strong> — required at trailheads. <a href="https://www.fs.usda.gov/r03/coconino/passes-permits/recreation/red-rock-pass" target="_blank" rel="noopener">Buy here →</a></li>
+      <li><strong>Soldier Pass OHV permit</strong> — 72hr advance via <a href="https://www.recreation.gov" target="_blank" rel="noopener">Recreation.gov</a></li>
+      <li><strong>Casner Mountain permit</strong> — free, limited, call 928-203-2900</li>
+      <li><strong>Offline maps</strong> — <a href="https://www.trailforks.com/region/sedona/" target="_blank" rel="noopener">Trailforks</a> (MTB), <a href="https://www.onxmaps.com/offroad" target="_blank" rel="noopener">onX Offroad</a> (OHV), <a href="https://www.alltrails.com/us/arizona/sedona" target="_blank" rel="noopener">AllTrails</a> (hiking)</li>
+      <li><strong>Water</strong> — Fill in Sedona or Cottonwood; none at camp</li>
+      <li><strong>Showers</strong> — Cottonwood, 20 min SW</li>
+      <li><strong>Sedona Shuttle</strong> — free, Thu-Sun; <a href="https://www.sedonaaz.gov/your-government/departments/sedona-shuttle" target="_blank" rel="noopener">schedule →</a></li>
+    </ul>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__line">CLICK ANY PIN · POV VIDEO · TRAIL DETAILS</div>
+    <div class="footer__line footer__line--small">Built for the trip. Coconino NF · Red Rock Country.</div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal__backdrop"></div>
+  <div class="modal__inner" role="dialog" aria-modal="true">
+    <button class="modal__close" aria-label="Close">×</button>
+    <div class="modal__content" id="modal-content"></div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
