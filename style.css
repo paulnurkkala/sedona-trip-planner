@@ -256,6 +256,26 @@ a:hover { color: var(--ember); }
 }
 .pin-bike .pin-star { top: 0; right: 0; }
 
+/* Red heart badge: marks personal favorites */
+.pin-heart {
+  position: absolute;
+  top: -6px;
+  left: -8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ef4444;
+  color: #fff;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  z-index: 2;
+  pointer-events: none;
+}
+.pin-bike .pin-heart { top: 0; left: 0; }
+
 .leaflet-popup-content-wrapper {
   background: var(--paper);
   border-radius: 6px;
@@ -323,6 +343,20 @@ a:hover { color: var(--ember); }
   text-transform: uppercase;
   background: #eab308;
   color: #2b1810;
+  padding: 0.25rem 0.55rem;
+  border-radius: 3px;
+  margin-bottom: 0.55rem;
+  margin-right: 0.4rem;
+}
+.leaflet-popup-content .popup-favorite {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: #ef4444;
+  color: #fff;
   padding: 0.25rem 0.55rem;
   border-radius: 3px;
   margin-bottom: 0.55rem;
@@ -434,6 +468,72 @@ a:hover { color: var(--ember); }
   font-size: 1rem;
 }
 .ride-list strong { color: var(--rust-deep); }
+
+/* Clickable list items: click any to fly the map to that pin */
+.ride-list__item {
+  padding: 0.85rem 0.85rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.15s ease, padding-left 0.15s ease;
+  outline: none;
+}
+.ride-list__item:hover,
+.ride-list__item:focus {
+  background: var(--dust);
+  padding-left: 1.1rem;
+}
+.ride-list__item:focus-visible {
+  box-shadow: inset 3px 0 0 var(--rust-deep);
+}
+.ride-list__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin-bottom: 0.2rem;
+}
+.ride-list__badges {
+  display: inline-flex;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+.ride-list__heart {
+  color: #ef4444;
+  font-size: 1.05rem;
+  line-height: 1;
+}
+.ride-list__star {
+  color: #eab308;
+  font-size: 1.05rem;
+  line-height: 1;
+}
+.ride-list__meta {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--rust-deep);
+  margin-bottom: 0.2rem;
+}
+.ride-list__short {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  color: var(--rock);
+  margin-bottom: 0.35rem;
+}
+.ride-list__basecamp {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: var(--cat-basecamp);
+  color: #fff;
+  padding: 0.18rem 0.45rem;
+  border-radius: 3px;
+}
 
 .checklist {
   list-style: none;
@@ -608,6 +708,22 @@ a:hover { color: var(--ember); }
   text-transform: uppercase;
   background: #eab308;
   color: #2b1810;
+  padding: 0.55rem 0.9rem;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.modal__favorite {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: #ef4444;
+  color: #fff;
   padding: 0.55rem 0.9rem;
   border-radius: 4px;
   margin-right: 0.5rem;

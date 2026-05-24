@@ -812,6 +812,12 @@ const PINS = [
   // already on the map, just add `suggested: true` (and optionally
   // `suggestedBy: 'name'`) to that pin and it'll get a gold star badge.
   // For new spots, add a pin with `category: 'suggested'`.
+
+  // MY FAVORITES
+  // Personal favorites are flagged with `favorite: true` on any existing
+  // pin. They get a red heart badge on the map and in the list view —
+  // separate from the gold star (friends & family) so you can tell who
+  // recommended what.
 ];
 
 const CATEGORIES = {

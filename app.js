@@ -71,6 +71,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const starBadge = pin.suggested
       ? `<div class="pin-star" title="Suggested by friends & family">★</div>`
       : '';
+    const heartBadge = pin.favorite
+      ? `<div class="pin-heart" title="My favorite">♥</div>`
+      : '';
+    const badges = heartBadge + starBadge;
 
     // MTB: standalone bicycle silhouette, no colored teardrop background.
     // Anchor at the wheel line (cy=17.5 in viewBox 0-24 → ~73% down),
@@ -87,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </svg>`;
       return L.divIcon({
         className: 'sedona-pin sedona-pin--bike' + (pin.suggested ? ' sedona-pin--suggested' : ''),
-        html: `<div class="pin-bike">${bikeSvg}${starBadge}</div>`,
+        html: `<div class="pin-bike">${bikeSvg}${badges}</div>`,
         iconSize: [size, size],
         iconAnchor: [size / 2, anchorY],
         popupAnchor: [0, -anchorY + 2]
@@ -109,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </svg>`;
       return L.divIcon({
         className: 'sedona-pin sedona-pin--moto' + (pin.suggested ? ' sedona-pin--suggested' : ''),
-        html: `<div class="pin-bike pin-moto">${motoSvg}${starBadge}</div>`,
+        html: `<div class="pin-bike pin-moto">${motoSvg}${badges}</div>`,
         iconSize: [size, size],
         iconAnchor: [size / 2, anchorY],
         popupAnchor: [0, -anchorY + 2]
@@ -126,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     return L.divIcon({
       className: 'sedona-pin' + (pin.suggested ? ' sedona-pin--suggested' : ''),
-      html: `<div class="${klass}" style="background:${color}"><div class="pin-marker__inner">${icon}</div></div>${starBadge}`,
+      html: `<div class="${klass}" style="background:${color}"><div class="pin-marker__inner">${icon}</div></div>${badges}`,
       iconSize: [size, size],
       iconAnchor: [size / 2, anchorY],
       popupAnchor: [0, -anchorY + 6]
@@ -146,6 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const popupHtml = `
       <div class="popup-short">${CATEGORIES[pin.category].label}</div>
       <strong>${pin.name}</strong>
+      ${pin.favorite ? `<div class="popup-favorite">♥ My favorite</div>` : ''}
       ${pin.suggested ? `<div class="popup-suggested">★ ${pin.suggestedBy || 'Suggested by friends & family'}</div>` : ''}
       ${pin.distance ? `<div style="font-size: 0.85rem; color: #6b4423; margin-bottom: 0.4rem;">${pin.distance}${pin.difficulty ? ' · ' + pin.difficulty : ''}</div>` : ''}
       ${pin.fromBasecamp ? `<div class="popup-basecamp">⛺ ${pin.fromBasecamp}</div>` : ''}
@@ -196,6 +201,10 @@ document.addEventListener('DOMContentLoaded', () => {
       ? `<div class="modal__suggested">★ ${pin.suggestedBy || 'Suggested by friends & family'}</div>`
       : '';
 
+    const favoriteBanner = pin.favorite
+      ? `<div class="modal__favorite">♥ My favorite</div>`
+      : '';
+
     const tipsHtml = (pin.tips && pin.tips.length) ? `
       <div class="modal__tips">
         <div class="modal__tips-title">Field Notes</div>
@@ -221,6 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="modal__cat" style="background:${cat.color}">${cat.icon} ${cat.label}</div>
       <h2 class="modal__title">${pin.name}</h2>
       <div class="modal__meta">${metaItems.join('')}</div>
+      ${favoriteBanner}
       ${suggestedBanner}
       ${basecampBanner}
       <div class="modal__desc">${pin.description}</div>
@@ -250,6 +260,16 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================
+  // selectPin — scroll to the map, fly to the pin, open its popup
+  // Reused by both legend (single-pin categories) and the list views.
+  // ==========================================
+  function selectPin(pin) {
+    document.querySelector('.map-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    map.flyTo([pin.lat, pin.lng], Math.max(map.getZoom(), 15), { duration: 0.8 });
+    setTimeout(() => markers[pin.id] && markers[pin.id].openPopup(), 550);
+  }
+
+  // ==========================================
   // LEGEND: hide entries for empty categories, wire up click → filter
   // ==========================================
   document.querySelectorAll('.legend__item').forEach(item => {
@@ -265,15 +285,50 @@ document.addEventListener('DOMContentLoaded', () => {
       const catPins = PINS.filter(p => p.category === cat);
       if (catPins.length === 0) return;
       if (catPins.length === 1) {
-        const p = catPins[0];
-        map.setView([p.lat, p.lng], 14);
-        markers[p.id].openPopup();
+        selectPin(catPins[0]);
       } else {
         const b = L.latLngBounds(catPins.map(p => [p.lat, p.lng]));
         map.fitBounds(b, { padding: [80, 80] });
+        document.querySelector('.map-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
-      // Scroll back up to the map
-      document.querySelector('.map-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  // ==========================================
+  // LIST VIEW: render <ul data-category-list="..."> from PINS.
+  // Each item is clickable and keyboard-activatable — selects the pin
+  // on the map (scroll + fly + popup).
+  // ==========================================
+  document.querySelectorAll('[data-category-list]').forEach(ul => {
+    const cat = ul.dataset.categoryList;
+    const catPins = PINS.filter(p => p.category === cat);
+    ul.innerHTML = catPins.map(pin => {
+      const meta = [pin.difficulty, pin.distance].filter(Boolean).join(' · ');
+      return `
+        <li class="ride-list__item" data-pin-id="${pin.id}" tabindex="0" role="button" aria-label="Show ${pin.name} on the map">
+          <div class="ride-list__row">
+            <strong>${pin.name}</strong>
+            <div class="ride-list__badges">
+              ${pin.favorite ? '<span class="ride-list__heart" title="My favorite">♥</span>' : ''}
+              ${pin.suggested ? '<span class="ride-list__star" title="Suggested by friends & family">★</span>' : ''}
+            </div>
+          </div>
+          ${meta ? `<div class="ride-list__meta">${meta}</div>` : ''}
+          ${pin.short ? `<div class="ride-list__short">${pin.short}</div>` : ''}
+          ${pin.fromBasecamp ? `<div class="ride-list__basecamp">⛺ ${pin.fromBasecamp}</div>` : ''}
+        </li>
+      `;
+    }).join('');
+
+    ul.querySelectorAll('.ride-list__item').forEach(li => {
+      const handler = () => {
+        const pin = PINS.find(p => p.id === li.dataset.pinId);
+        if (pin) selectPin(pin);
+      };
+      li.addEventListener('click', handler);
+      li.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handler(); }
+      });
     });
   });
 
